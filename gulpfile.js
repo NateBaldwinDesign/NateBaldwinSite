@@ -15,36 +15,32 @@ gulp.task('sort-scss', function() {
         "sort-order": cssSortConfig
       })
     ]))
-    .pipe(gulp.dest('app/sass/'));
+    .pipe(gulp.dest('scss/'));
+});
+// Clean existing CSS before compiling
+gulp.task('scss-clean', function() {
+  return gulp.src('nate-baldwin-theme/css/**/*.css*').pipe(clean());
 });
 // Compile documentation site SASS
-gulp.task('sass-patterns-clean', ['build-eds'], function() {
-    return gulp.src('app/patterns/**/*.css*').pipe(clean());
-});
-
-gulp.task('sass-patterns-clean-no-build', function() {
-    return gulp.src('app/patterns/**/*.css*').pipe(clean());
-});
-
-gulp.task('sass-patterns', ['sass-patterns-clean'], function() {
-    return gulp.src(['app/patterns/**/*.scss'])
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            importer: importOnce,
-            importOnce: {
-                index: false,
-                css: false,
-                bower: false
-            }
-        }).on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: ['last 3 versions', 'not ie <= 9'],
-            cascade: true
-        }))
-        .pipe(sourcemaps.write({
-            addComment: false
-        }))
-        .pipe(gulp.dest('app/patterns'))
+gulp.task('scss', ['scss-clean'], function() {
+  return gulp.src(['scss/**/*.scss'])
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      importer: importOnce,
+      importOnce: {
+        index: false,
+        css: false,
+        bower: false
+      }
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 3 versions', 'not ie <= 9'],
+      cascade: true
+    }))
+    .pipe(sourcemaps.write({
+      addComment: false
+    }))
+    .pipe(gulp.dest('nate-baldwin-theme/css'))
 });
 
 //==========================================
