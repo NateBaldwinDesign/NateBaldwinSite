@@ -1,0 +1,60 @@
+@import '../atoms/_colors-global';
+@import '../atoms/_colors-theme';
+
+// Font Variables
+$primary-font-stack: 'open_sansregular', 'Open Sans', Helvetica, sans-serif;
+$primary-font-stack-italic: 'open_sansitalic', 'Open Sans', Helvetica Oblique, sans-serif;
+$primary-font-stack-semibold: 'open_sanssemibold', 'Open Sans', Helvetica, sans-serif;
+$primary-font-stack-semibold-italic: 'open_sanssemibold_italic', 'Open Sans', Helvetica Oblique, sans-serif;
+$primary-font-stack-bold: 'open_sansbold', 'Open Sans', Helvetica, sans-serif;
+$primary-font-stack-bold-italic: 'open_sansbold_italic', 'Open Sans', Helvetica Oblique, sans-serif;
+$monospace-font: Courier, monospace;
+$font-color: $color-base-35;
+$base-font-size: .875rem;
+
+// Rounded Corners
+$rounded-corners: .429rem;
+$inner-rounded-corners: .36rem;
+$rounded-corners-sm: .229rem;
+
+// Globals
+$body-background-color: $color-base-85;
+
+// Some of these pattern-specific variables will need
+// to be moved in the future, in order to allow more
+// robust theming capability
+$list-background: $color-base-95;
+$list-border: $color-base-95;
+$list-hover: $color-secondary-105;
+$list-hover-border: $color-secondary-95;
+$list-active: $color-primary-105;
+$list-active-border: $color-primary-95;
+$list-active-hover: $color-primary-95;
+$list-active-hover-border: $color-primary-85;
+
+$label-border: .0625rem solid;
+$label-radius: .25rem;
+
+// Shadows
+$popover-shadow: 0 .25rem .875rem rgba(0, 0, 0, .2);
+$fab-shadow: 0 .25rem .875rem rgba(0, 0, 0, .5);
+$fab-shadow-hover: 0 .125rem 1.125rem rgba(0, 0, 0, .5);
+$person-card-shadow: 0 0 2.5rem rgba(0, 0, 0, .35);
+
+$card-shadow: 0 .125rem .1875rem rgba(0, 0, 0, .15), 0 .25rem .5rem rgba(0, 0, 0, .1);
+$card-shadow-active: 0 .125rem .1875rem rgba(0, 0, 0, .15), 0 .25rem .5rem rgba(0, 0, 0, .1), 0 0 0 .0625rem $color-primary-45;
+
+// Global Breakpoints ////////////////////////////////////////////
+$breakpoint-xsmall:   26.25rem;   // 420px
+$breakpoint-small:    48rem;      // 768px
+$breakpoint-medium:   62rem;      // 992px
+$breakpoint-large:    75rem;      // 1200px
+$breakpoint-xlarge:   90rem;      // 1440px
+$breakpoint-xxlarge:  125rem;     // 2000px
+
+// Animations ////////////////////////////////////////////////////
+$animation-transition-none:     all 0s ease-in-out;
+$animation-transition-fast:     all .1s ease-in-out;
+$animation-transition-fast-alt: all .15s ease;   // This is unique to a specific pattern
+$animation-transition-medium:   all .3s ease-in-out;
+$animation-transition-slow:     all .5s ease-in-out;

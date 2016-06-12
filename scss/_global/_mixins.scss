@@ -1,0 +1,124 @@
+@import '_variables';
+
+// Font Mixins
+@mixin primary-font {
+  font-family: $primary-font-stack;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin primary-font-italic {
+  font-family: $primary-font-stack-italic;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@mixin primary-font-semibold {
+  font-family: $primary-font-stack-semibold;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin primary-font-semibold-italic {
+  font-family: $primary-font-stack-semibold-italic;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@mixin primary-font-bold {
+  font-family: $primary-font-stack-bold;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin primary-font-bold-italic {
+  font-family: $primary-font-stack-bold-italic;
+  font-style: italic;
+  font-weight: 600;
+}
+// Clearfix
+@mixin clearfix {
+  &::before,
+  &::after {
+    display: table;
+    content: ' ';
+  }
+
+  &::after {clear: both;}
+}
+
+@mixin user-select {user-select: none;}
+
+@mixin touch-action {touch-action: manipulation;}
+
+//Shadows
+@mixin popover-shadow($popover-shadow) {
+  box-shadow: $popover-shadow;
+}
+// Media Queries ///////////////////////////////////////////
+//
+// Developing mobile-first makes it unnecessary to use
+// media queries that target the smallest device size.
+//
+// These mixins allow easy media-queries for larger devices
+
+// 420 and above
+@mixin query-xsmall {
+  @media only screen and (min-width: #{$breakpoint-xsmall}) {
+    @content
+  }
+}
+
+// 768px and above
+@mixin query-small {
+  @media only screen and (min-width: #{$breakpoint-small}) {
+    @content
+  }
+}
+
+// 992px and above
+@mixin query-medium {
+  @media only screen and (min-width: #{$breakpoint-medium}) {
+    @content
+  }
+}
+// 1200px and above
+@mixin query-large {
+  @media only screen and (min-width: #{$breakpoint-large}) {
+    @content
+  }
+}
+// 1440px and above
+@mixin query-xlarge {
+  @media only screen and (min-width: #{$breakpoint-xlarge}) {
+    @content
+  }
+}
+// 2000 and above
+@mixin query-xxlarge {
+  @media only screen and (min-width: #{$breakpoint-xxlarge}) {
+    @content
+  }
+}
+// CSS Transitions ////////////////////////////////////////
+@mixin transition-fast {
+  transition: $animation-transition-fast;
+}
+
+@mixin transition-medium {
+  transition: $animation-transition-medium;
+}
+
+@mixin transition-slow {
+  transition: $animation-transition-slow;
+}
+
+@mixin transition-none {
+  transition: none;
+}
+
+// Background Opacity Mixin
+@mixin background-opacity($color, $opacity: .3) {
+  background: $color; // The Fallback
+  background: rgba($color, $opacity);
+}

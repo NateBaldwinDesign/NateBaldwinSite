@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/NateBaldwinDesign/NateBaldwinSite.git"
   },
-  "license": "ISC",
+  "license": "Apache",
   "devDependencies": {
     "bi-app-sass": "^1.1.0",
     "browser-sync": "^2.13.0",
