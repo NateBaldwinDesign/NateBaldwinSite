@@ -1,7 +1,7 @@
 'use strict';
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    cssSortConfig = require('./smacss.json')
+    cssSortConfig = require('./smacss.json'),
     clean = require('gulp-rimraf'),
     zip = require('gulp-zip'),
     sourcemaps = require("gulp-sourcemaps"),
@@ -12,6 +12,9 @@ var gulp = require('gulp'),
     gulpPostcssSort = require('postcss-sorting'),
     cssSortConfig = require('./smacss.json'),
     rename = require('gulp-rename'),
+    svgmin = require('gulp-svgmin'),
+    svgstore = require('gulp-svgstore'),
+    cheerio = require('gulp-cheerio'),
     nb_package = require('./package.json');
 
 var watchOptions = {
@@ -94,7 +97,7 @@ gulp.task('svg-imagemin', function() {
 // Create SVG symbol sprite
 gulp.task('svg-sprite', ['svg-imagemin'], function() {
   return gulp
-    .src(['icons/svg/*.svg', {
+    .src('icons/svg/*.svg', {
       base: '.'
     })
     .pipe(rename({
