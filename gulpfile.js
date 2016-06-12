@@ -15,6 +15,8 @@ var gulp = require('gulp'),
     svgmin = require('gulp-svgmin'),
     svgstore = require('gulp-svgstore'),
     cheerio = require('gulp-cheerio'),
+    pngquant = require('imagemin-pngquant'),
+    imagemin = require('gulp-imagemin'),
     nb_package = require('./package.json');
 
 var watchOptions = {
@@ -115,6 +117,22 @@ gulp.task('svg-sprite', ['svg-imagemin'], function() {
       }
     }))
     .pipe(rename('custom-portfolio-sprite.svg'))
+    .pipe(gulp.dest('nate-baldwin-theme/img'));
+});
+
+//==========================================
+// Image Minification
+//==========================================
+// Minify images used in Style Guide site
+gulp.task('imagemin', function() {
+  return gulp.src(['nate-baldwin-theme/img/*', '!custom-portfolio-sprite.svg'])
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{
+        removeViewBox: false
+      }],
+      use: [pngquant()]
+    }))
     .pipe(gulp.dest('nate-baldwin-theme/img'));
 });
 
