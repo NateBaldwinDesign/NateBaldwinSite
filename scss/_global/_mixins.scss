@@ -1,5 +1,3 @@
-@import '_variables';
-
 // Font Mixins
 @mixin primary-font {
   font-family: $primary-font-stack;
@@ -47,78 +45,52 @@
   &::after {clear: both;}
 }
 
-@mixin user-select {user-select: none;}
-
-@mixin touch-action {touch-action: manipulation;}
-
-//Shadows
-@mixin popover-shadow($popover-shadow) {
-  box-shadow: $popover-shadow;
-}
-// Media Queries ///////////////////////////////////////////
-//
-// Developing mobile-first makes it unnecessary to use
-// media queries that target the smallest device size.
-//
-// These mixins allow easy media-queries for larger devices
+// Media Queries 
 
 // 420 and above
 @mixin query-xsmall {
-  @media only screen and (min-width: #{$breakpoint-xsmall}) {
+  @media only screen and (min-width: #{$bp-xsmall}) {
     @content
   }
 }
 
 // 768px and above
 @mixin query-small {
-  @media only screen and (min-width: #{$breakpoint-small}) {
+  @media only screen and (min-width: #{$bp-small}) {
     @content
   }
 }
 
 // 992px and above
 @mixin query-medium {
-  @media only screen and (min-width: #{$breakpoint-medium}) {
+  @media only screen and (min-width: #{$bp-medium}) {
     @content
   }
 }
 // 1200px and above
 @mixin query-large {
-  @media only screen and (min-width: #{$breakpoint-large}) {
+  @media only screen and (min-width: #{$bp-large}) {
     @content
   }
 }
 // 1440px and above
 @mixin query-xlarge {
-  @media only screen and (min-width: #{$breakpoint-xlarge}) {
+  @media only screen and (min-width: #{$bp-xlarge}) {
     @content
   }
 }
 // 2000 and above
 @mixin query-xxlarge {
-  @media only screen and (min-width: #{$breakpoint-xxlarge}) {
+  @media only screen and (min-width: #{$bp-xxlarge}) {
     @content
   }
 }
-// CSS Transitions ////////////////////////////////////////
-@mixin transition-fast {
-  transition: $animation-transition-fast;
-}
 
-@mixin transition-medium {
-  transition: $animation-transition-medium;
-}
+// CSS Transitions 
+@mixin transition-fast {transition: $animation-transition-fast;}
 
-@mixin transition-slow {
-  transition: $animation-transition-slow;
-}
+@mixin transition-medium {transition: $animation-transition-medium;}
 
-@mixin transition-none {
-  transition: none;
-}
+@mixin transition-slow {transition: $animation-transition-slow;}
 
-// Background Opacity Mixin
-@mixin background-opacity($color, $opacity: .3) {
-  background: $color; // The Fallback
-  background: rgba($color, $opacity);
-}
+@mixin transition-none {transition: none;}
