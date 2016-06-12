@@ -17,7 +17,9 @@ var gulp = require('gulp'),
     cheerio = require('gulp-cheerio'),
     pngquant = require('imagemin-pngquant'),
     imagemin = require('gulp-imagemin'),
-    nb_package = require('./package.json');
+    nb_package = require('./package.json'),
+    connect = require('gulp-connect-php'),
+    browserSync = require('browser-sync');
 
 var watchOptions = {
     interval: 1000
@@ -142,7 +144,7 @@ gulp.task('imagemin', function() {
 gulp.task('connect-sync', function() {
   connect.server({}, function (){
     browserSync({
-      proxy: '127.0.0.1:8000'
+      proxy: '192.168.241.1:3000'
     });
   });
 

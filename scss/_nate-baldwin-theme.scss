@@ -10,8 +10,8 @@ Author URI: 	http://www.natebaldw.in
 @import '_vendor/_reset';
 @import '_vendor/_normalize';
 
-@import '_colors';
-@import '_includes/_variables';
-@import '_includes/_mixins';
-@import '_includes/_global';
+@import '_global/_colors';
+@import '_global/_variables';
+@import '_global/_mixins';
+@import '_global/_global';
 
