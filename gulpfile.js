@@ -31,7 +31,7 @@ var watchOptions = {
 //==========================================
 // Clean existing CSS before compiling
 gulp.task('css-clean', function() {
-  return gulp.src('nate-baldwin-theme/css/**/*.css*').pipe(clean());
+  return gulp.src('css/**/*.css*').pipe(clean());
 });
 // Sorts properties form SCSS files
 gulp.task('sort-scss', ['css-clean'], function() {
@@ -63,14 +63,14 @@ gulp.task('scss', ['css-clean'], function() {
     .pipe(sourcemaps.write({
       addComment: false
     }))
-    .pipe(gulp.dest('nate-baldwin-theme/css'))
+    .pipe(gulp.dest('css'))
 });
 //minifiy css
 gulp.task('minify-css', function() {
-  return gulp.src('nate-baldwin-theme/css/custom-portfolio.css')
+  return gulp.src('css/custom-portfolio.css')
     .pipe(cssnano())
     .pipe(rename("custom-portfolio.min.css"))
-    .pipe(gulp.dest('nate-baldwin-theme/css'));
+    .pipe(gulp.dest('css'));
 });
 
 //==========================================
@@ -120,7 +120,7 @@ gulp.task('svg-sprite', ['svg-imagemin'], function() {
       }
     }))
     .pipe(rename('custom-portfolio-sprite.svg'))
-    .pipe(gulp.dest('nate-baldwin-theme/img'));
+    .pipe(gulp.dest('img'));
 });
 
 //==========================================
@@ -128,7 +128,7 @@ gulp.task('svg-sprite', ['svg-imagemin'], function() {
 //==========================================
 // Minify images used in Style Guide site
 gulp.task('imagemin', function() {
-  return gulp.src(['nate-baldwin-theme/img/*', '!custom-portfolio-sprite.svg'])
+  return gulp.src(['img/*', '!custom-portfolio-sprite.svg'])
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{
@@ -136,7 +136,7 @@ gulp.task('imagemin', function() {
       }],
       use: [pngquant()]
     }))
-    .pipe(gulp.dest('nate-baldwin-theme/img'));
+    .pipe(gulp.dest('img'));
 });
 
 //==========================================
@@ -159,8 +159,8 @@ gulp.task('clean-archive', function() {
 });
 // Archive Theme
 gulp.task('archive', ['clean-archive'], function() {
-  return gulp.src('nate-baldwin-theme/**/*.*')
-    .pipe(zip('nate-baldwin-theme' + nb_package.version + '.zip'))
+  return gulp.src('**/*.*')
+    .pipe(zip('nate-baldwin-theme' + nb_package.version + '.zip')) // Need to move files into temp folder first, then run this on the temp folder
     .pipe(gulp.dest('builds'));
 });
 
@@ -173,7 +173,7 @@ gulp.task('development', [
   'connect-sync'
 ], function() {
   gulp.watch(['scss/**/*.scss'], watchOptions, ['scss']);
-  // gulp.watch(['**/*.php', '**/*.css', 'nate-baldwin-theme/img/*.*']).on('change', function () {
+  // gulp.watch(['**/*.php', '**/*.css', 'img/*.*']).on('change', function () {
   //   browserSync.reload();
   // });
 });
