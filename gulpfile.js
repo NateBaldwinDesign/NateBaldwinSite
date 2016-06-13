@@ -18,7 +18,8 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     imagemin = require('gulp-imagemin'),
     nb_package = require('./package.json'),
-    connect = require('gulp-connect-php'),
+    connectPhp = require('gulp-connect-php'),
+    connect = require('gulp-connect'),
     browserSync = require('browser-sync');
 
 var watchOptions = {
@@ -44,7 +45,7 @@ gulp.task('sort-scss', ['css-clean'], function() {
     .pipe(gulp.dest('scss/'));
 });
 // Compile documentation site SASS
-gulp.task('scss', ['sort-scss'], function() {
+gulp.task('scss', ['css-clean'], function() {
   return gulp.src(['scss/**/*.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -142,15 +143,10 @@ gulp.task('imagemin', function() {
 // PHP Server
 //==========================================
 gulp.task('connect-sync', function() {
-  connect.server({}, function (){
+  connectPhp.server({}, function (){
     browserSync({
       proxy: '192.168.241.1:3000'
     });
-  });
-
-  gulp.watch(['scss/**/*.scss'], watchOptions, ['scss']);
-  gulp.watch(['**/*.php', '**/*.css', 'nate-baldwin-theme/img/*.*']).on('change', function () {
-    browserSync.reload();
   });
 });
 
@@ -175,10 +171,16 @@ gulp.task('development', [
   'scss',
   'svg-sprite',
   'connect-sync'
-]);
+], function() {
+  gulp.watch(['scss/**/*.scss'], watchOptions, ['scss']);
+  // gulp.watch(['**/*.php', '**/*.css', 'nate-baldwin-theme/img/*.*']).on('change', function () {
+  //   browserSync.reload();
+  // });
+});
 
 gulp.task('build', [
   'scss',
+  'sort-scss',
   'minify-css',
   'svg-sprite',
   'archive'
