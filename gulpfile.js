@@ -18,13 +18,7 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     imagemin = require('gulp-imagemin'),
     nb_package = require('./package.json'),
-    connectPhp = require('gulp-connect-php'),
-    connect = require('gulp-connect'),
-    browserSync = require('browser-sync');
-
-var watchOptions = {
-    interval: 1000
-}
+    watchOptions = {interval: 1000}
 
 //==========================================
 // SASS preprocessing
@@ -140,22 +134,6 @@ gulp.task('imagemin', function() {
 });
 
 //==========================================
-// PHP Server
-//==========================================
-gulp.task('connect-sync', function() {
-  connectPhp.server({
-    hostname: '0.0.0.0',
-    port: 88
-  });
-  // connectPhp.server({}, function (){
-  //   browserSync({
-  //     proxy: '192.168.241.1:3000',
-  //     port: 3000
-  //   });
-  // });
-});
-
-//==========================================
 // Archiving Builds
 //==========================================
 // Clean Archive directory
@@ -172,15 +150,11 @@ gulp.task('archive', ['clean-archive'], function() {
 //==========================================
 // Environments
 //==========================================
-gulp.task('development', [
+gulp.task('default', [
   'scss',
-  'svg-sprite',
-  'connect-sync'
+  'svg-sprite'
 ], function() {
   gulp.watch(['scss/**/*.scss'], watchOptions, ['scss']);
-  // gulp.watch(['**/*.php', '**/*.css', 'img/*.*']).on('change', function () {
-  //   browserSync.reload();
-  // });
 });
 
 gulp.task('build', [

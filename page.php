@@ -1,25 +1,16 @@
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
- *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
- */
-?>
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header' ) ); ?>
+<div class="l-section--hero">
+	<div class="l-container--fluid">
+		<h1>Nate Baldwin</h1>
+		<?php the_content(); ?>
+	</div>
+</div>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h2><?php the_title(); ?></h2>
-<?php the_content(); ?>
-<?php comments_template( '', true ); ?>
-<?php endwhile; ?>
-
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<div class="l-section--red u-fixed-bottom">
+	<?php echo file_get_contents('wp-content/themes/NateBaldwinSite/img/section-angle.svg') ?>
+	<div class="l-section__content">
+		<div class="l-container--fluid">
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+		</div>
+	</div>
+</div>

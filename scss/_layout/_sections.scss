@@ -1,0 +1,24 @@
+.l-section,
+%l-section {
+	width: 100%;
+}
+
+.l-section__content {
+	display: block;
+	width: 100%;
+	margin: -4px 0 0;
+}
+
+.section__angle {
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+
+.l-section--red {
+	@extend %l-section;
+
+	.l-section__content {background-color: $color-primary;}
+
+	.section__angle {fill: $color-primary;}
+}

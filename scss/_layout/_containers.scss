@@ -1,0 +1,10 @@
+$container-padding: 40px 60px;
+
+.l-container {
+	padding: $container-padding;
+}
+
+.l-container--fluid {
+	width: 100%;
+	padding: $container-padding;
+}
