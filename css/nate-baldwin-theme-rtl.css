@@ -226,7 +226,7 @@ body {
   padding: 40px 60px; }
 
 .l-section--hero {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 300px);
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -240,6 +240,72 @@ body {
   width: 30%; }
   .header__logo svg {
     width: inherit; }
+
+/* ---------------------------------------------------------------------------------------------------------- 
+Font-Face ----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/* Bitter  */
+@font-face {
+  font-family: 'bitterbold';
+  src: url("../fonts/bitter-font/bitter-bold-webfont.eot");
+  src: url("../fonts/bitter-font/bitter-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bitter-font/bitter-bold-webfont.woff2") format("woff2"), url("../fonts/bitter-font/bitter-bold-webfont.woff") format("woff"), url("../fonts/bitter-font/bitter-bold-webfont.ttf") format("truetype"), url("../fonts/bitter-font/bitter-bold-webfont.svg#bitterbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'bitterbold_italic';
+  src: url("../fonts/bitter-font/bitter-bolditalic-webfont.eot");
+  src: url("../fonts/bitter-font/bitter-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bitter-font/bitter-bolditalic-webfont.woff2") format("woff2"), url("../fonts/bitter-font/bitter-bolditalic-webfont.woff") format("woff"), url("../fonts/bitter-font/bitter-bolditalic-webfont.ttf") format("truetype"), url("../fonts/bitter-font/bitter-bolditalic-webfont.svg#bitterbold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'bitteritalic';
+  src: url("../fonts/bitter-font/bitter-italic-webfont.eot");
+  src: url("../fonts/bitter-font/bitter-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bitter-font/bitter-italic-webfont.woff2") format("woff2"), url("../fonts/bitter-font/bitter-italic-webfont.woff") format("woff"), url("../fonts/bitter-font/bitter-italic-webfont.ttf") format("truetype"), url("../fonts/bitter-font/bitter-italic-webfont.svg#bitteritalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'bitterregular';
+  src: url("../fonts/bitter-font/bitter-regular-webfont.eot");
+  src: url("../fonts/bitter-font/bitter-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bitter-font/bitter-regular-webfont.woff2") format("woff2"), url("../fonts/bitter-font/bitter-regular-webfont.woff") format("woff"), url("../fonts/bitter-font/bitter-regular-webfont.ttf") format("truetype"), url("../fonts/bitter-font/bitter-regular-webfont.svg#bitterregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'signalistregular';
+  src: url("../fonts/signalist/signalist-webfont.eot");
+  src: url("../fonts/signalist/signalist-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/signalist/signalist-webfont.woff2") format("woff2"), url("../fonts/signalist/signalist-webfont.woff") format("woff"), url("../fonts/signalist/signalist-webfont.ttf") format("truetype"), url("../fonts/signalist/signalist-webfont.svg#signalistregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "signalistregular", "bitterregular", Georgia, serif;
+  font-weight: normal;
+  display: inline-block;
+  z-index: 1;
+  margin: .4em 0 .2em; }
+
+h1 {
+  font-size: 12em; }
+
+h1::before {
+  display: inline-block;
+  content: ' ';
+  height: 1.6ex;
+  left: 0;
+  margin-top: .3ex;
+  min-width: 8.5ex;
+  position: absolute;
+  background: #EC1C24;
+  z-index: -1;
+  opacity: .5; }
 
 .u-fixed-bottom {
   position: fixed;
