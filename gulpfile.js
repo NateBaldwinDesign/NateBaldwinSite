@@ -143,11 +143,16 @@ gulp.task('imagemin', function() {
 // PHP Server
 //==========================================
 gulp.task('connect-sync', function() {
-  connectPhp.server({}, function (){
-    browserSync({
-      proxy: '192.168.241.1:3000'
-    });
+  connectPhp.server({
+    hostname: '0.0.0.0',
+    port: 88
   });
+  // connectPhp.server({}, function (){
+  //   browserSync({
+  //     proxy: '192.168.241.1:3000',
+  //     port: 3000
+  //   });
+  // });
 });
 
 //==========================================
