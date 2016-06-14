@@ -15,10 +15,26 @@
 	margin: 0;
 }
 
-.l-section--red {
+.l-section--primary {
 	@extend %l-section;
 
 	.l-section__content {background-color: $color-primary;}
 
 	.section__angle {fill: $color-primary;}
+}
+
+.l-section--secondary {
+	@extend %l-section;
+
+	.l-section__content {background-color: $color-secondary;}
+
+	.section__angle {fill: $color-secondary;}
+}
+
+.l-section--light-gray {
+	@extend %l-section;
+
+	.l-section__content {background-color: $color-light-gray;}
+
+	.section__angle {fill: $color-light-gray;}
 }

@@ -85,7 +85,7 @@ h1::before {
 	margin-top: .3ex;
 	min-width: 8.5ex;
 	position: absolute;
-	background: $color-primary;
+	background: $color-secondary;
 	z-index: -1;
-	opacity: .5;
+	opacity: 1;
 }

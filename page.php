@@ -6,7 +6,7 @@
 	</div>
 </div>
 
-<div class="l-section--red u-fixed-bottom">
+<div class="l-section--primary u-fixed-bottom">
 	<?php echo file_get_contents('wp-content/themes/NateBaldwinSite/img/section-angle.svg') ?>
 	<div class="l-section__content">
 		<div class="l-container--fluid">
