@@ -75,7 +75,10 @@ h6 {
 }
 
 h1 {
-	font-size: 12em;
+	font-size: 5em;
+	@include query-xsmall {font-size: 7em;}
+	@include query-small {font-size: 10em;}
+	@include query-medium {font-size: 12em;}
 }
 h1::before {
 	display: inline-block;

@@ -1,0 +1,39 @@
+
+// 420 and above
+@mixin query-xsmall {
+  @media only screen and (min-width: #{$bp-xsmall}) {
+    @content
+  }
+}
+
+// 768px and above
+@mixin query-small {
+  @media only screen and (min-width: #{$bp-small}) {
+    @content
+  }
+}
+
+// 992px and above
+@mixin query-medium {
+  @media only screen and (min-width: #{$bp-medium}) {
+    @content
+  }
+}
+// 1200px and above
+@mixin query-large {
+  @media only screen and (min-width: #{$bp-large}) {
+    @content
+  }
+}
+// 1440px and above
+@mixin query-xlarge {
+  @media only screen and (min-width: #{$bp-xlarge}) {
+    @content
+  }
+}
+// 2000 and above
+@mixin query-xxlarge {
+  @media only screen and (min-width: #{$bp-xxlarge}) {
+    @content
+  }
+}
