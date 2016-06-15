@@ -6,6 +6,7 @@ Version: 		2.0.0
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic);
 * {
   box-sizing: border-box; }
 
@@ -201,7 +202,8 @@ body {
   padding: 0; }
 
 html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 100%; }
 
 body {
   min-height: 100vh; }
@@ -352,6 +354,9 @@ Font-Face ----------------------------------------------------------------------
   font-weight: normal;
   font-style: normal; }
 
+/*--------
+External fonts
+---------*/
 h1,
 h2,
 h3,
@@ -395,7 +400,7 @@ h2 {
   font-weight: 400;
   margin-right: 3em;
   font-size: 1.25em;
-  line-height: 1.2;
+  line-height: 1.125;
   width: 22ex;
   color: #61777e; }
   @media only screen and (min-width: 32rem) {
@@ -408,7 +413,12 @@ h2 {
       color: #80969d; } }
   @media only screen and (min-width: 62rem) {
     .lead > p {
+      width: 24ex;
       font-size: 3em; } }
+
+.fancy-amp {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-style: italic; }
 
 footer {
   font-family: "bitterregular", Georgia, serif;

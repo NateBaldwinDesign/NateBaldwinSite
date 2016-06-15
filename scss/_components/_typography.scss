@@ -60,6 +60,11 @@ Font-Face ----------------------------------------------------------------------
 
 }
 
+/*--------
+External fonts
+---------*/
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic);
+
 
 h1,
 h2,
@@ -105,7 +110,7 @@ h2 {
 	@include margin-left(3em);
 
 	font-size: 1.25em;
-	line-height: 1.2;
+	line-height: 1.125;
 	width: 22ex;
 	color: $color-secondary-darker;
 
@@ -118,7 +123,15 @@ h2 {
 		color: $color-secondary-dark;
 	}
 
-	@include query-medium {font-size: 3em;}
+	@include query-medium {
+        width: 24ex;
+        font-size: 3em;
+    }
+}
+
+.fancy-amp {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-style: italic;
 }
 
 footer {
