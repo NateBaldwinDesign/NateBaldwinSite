@@ -1,11 +1,11 @@
 .l-section--hero {
+	display: flex;
 	height: calc(100vh - 169px);
 	min-height: 300px;
-	display: flex;
 	align-items: center;
 }
 
 #header-triangle {
-	transform: rotate(180deg);
 	width: 35%;
+	transform: rotate(180deg);
 }

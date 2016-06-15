@@ -2,8 +2,8 @@ $container-padding: 40px 60px;
 
 .l-container {
 	display: flex;
-	flex-wrap: wrap;
 	padding: $container-padding;
+	flex-wrap: wrap;
 }
 
 .l-container--fluid {

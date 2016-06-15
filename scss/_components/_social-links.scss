@@ -10,24 +10,25 @@
 		width: 50%;
 		margin: 0;
 	}
+
 	@include query-small {width: 25%;}
 }
 
 .social__item {
 	display: flex;
-	text-decoration: none;
-	align-items: center;
-	color: #fff;
-	opacity: .8;
 	transition: $transition-slow;
+	color: #fff;
+	text-decoration: none;
+	opacity: .8;
+	align-items: center;
 
 	&:hover,
 	&:focus,
 	&:active,
 	&:active:hover,
 	&:active:focus {
-		opacity: 1;
 		transition: $transition-slow;
+		opacity: 1;
 
 		.social__icon {
 			transition: $transition-slow;
@@ -38,13 +39,14 @@
 
 .social__icon {
 	@include margin-right(1rem);
+
 	display: flex;
-	border-radius: 50%;
-	align-items: center;
-	height: 56px;
 	width: 56px;
+	height: 56px;
 	padding: .75rem;
 	transition: $transition-slow;
+	border-radius: 50%;
+	align-items: center;
 
 	svg {
 		display: block;

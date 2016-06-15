@@ -5,58 +5,58 @@ Font-Face ----------------------------------------------------------------------
 /* Bitter  */
 @font-face {
     font-family: 'bitterbold';
+    font-style: normal;
+    font-weight: normal;
     src: url('../fonts/bitter-font/bitter-bold-webfont.eot');
     src: url('../fonts/bitter-font/bitter-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bitter-font/bitter-bold-webfont.woff2') format('woff2'),
          url('../fonts/bitter-font/bitter-bold-webfont.woff') format('woff'),
          url('../fonts/bitter-font/bitter-bold-webfont.ttf') format('truetype'),
          url('../fonts/bitter-font/bitter-bold-webfont.svg#bitterbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: 'bitterbold_italic';
+    font-style: normal;
+    font-weight: normal;
     src: url('../fonts/bitter-font/bitter-bolditalic-webfont.eot');
     src: url('../fonts/bitter-font/bitter-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bitter-font/bitter-bolditalic-webfont.woff2') format('woff2'),
          url('../fonts/bitter-font/bitter-bolditalic-webfont.woff') format('woff'),
          url('../fonts/bitter-font/bitter-bolditalic-webfont.ttf') format('truetype'),
          url('../fonts/bitter-font/bitter-bolditalic-webfont.svg#bitterbold_italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: 'bitteritalic';
+    font-style: normal;
+    font-weight: normal;
     src: url('../fonts/bitter-font/bitter-italic-webfont.eot');
     src: url('../fonts/bitter-font/bitter-italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bitter-font/bitter-italic-webfont.woff2') format('woff2'),
          url('../fonts/bitter-font/bitter-italic-webfont.woff') format('woff'),
          url('../fonts/bitter-font/bitter-italic-webfont.ttf') format('truetype'),
          url('../fonts/bitter-font/bitter-italic-webfont.svg#bitteritalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: 'bitterregular';
+    font-style: normal;
+    font-weight: normal;
     src: url('../fonts/bitter-font/bitter-regular-webfont.eot');
     src: url('../fonts/bitter-font/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bitter-font/bitter-regular-webfont.woff2') format('woff2'),
          url('../fonts/bitter-font/bitter-regular-webfont.woff') format('woff'),
          url('../fonts/bitter-font/bitter-regular-webfont.ttf') format('truetype'),
          url('../fonts/bitter-font/bitter-regular-webfont.svg#bitterregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: 'signalistregular';
+    font-style: normal;
+    font-weight: normal;
     src: url('../fonts/signalist/signalist-webfont.eot');
     src: url('../fonts/signalist/signalist-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/signalist/signalist-webfont.woff2') format('woff2'),
          url('../fonts/signalist/signalist-webfont.woff') format('woff'),
          url('../fonts/signalist/signalist-webfont.ttf') format('truetype'),
          url('../fonts/signalist/signalist-webfont.svg#signalistregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
 }
 
@@ -73,35 +73,44 @@ h4,
 h5,
 h6 {
 	@include primary-font;
+
 	display: inline-block;
-	z-index: 1;
-	margin: .4em 0 .2em
+	margin: .4em 0 .2em;
+	z-index: 1
 }
 
 h1 {
 	font-size: 5em;
+
 	@include query-xsmall {font-size: 7em;}
+
 	@include query-small {font-size: 10em;}
+
 	@include query-medium {font-size: 12em;}
 }
-// Highlight effect for h1
-// h1::before {
-// 	display: inline-block;
-// 	content: ' ';
-// 	height: 1.6ex;
-// 	left: 0;
-// 	margin-top: .3ex;
-// 	min-width: 8.5ex;
-// 	position: absolute;
-// 	background: $color-secondary;
-// 	z-index: -1;
-// 	opacity: 1;
-// }
+/*
+Highlight effect for h1
+h1::before {
+	display: inline-block;
+	content: ' ';
+	height: 1.6ex;
+	left: 0;
+	margin-top: .3ex;
+	min-width: 8.5ex;
+	position: absolute;
+	background: $color-secondary;
+	z-index: -1;
+	opacity: 1;
+}
+*/
 
 h2 {
     font-size: 4em;
+
     @include query-xsmall {font-size: 5em;}
+
     @include query-small {font-size: 5em;}
+
     @include query-medium {font-size: 6em;}
 }
 
@@ -109,18 +118,18 @@ h2 {
 	@include secondary-font;
 	@include margin-left(3em);
 
-	font-size: 1.25em;
-	line-height: 1.125;
 	width: 22ex;
 	color: $color-secondary-darker;
+	font-size: 1.25em;
+	line-height: 1.125;
 
 	@include query-xsmall {font-size: 1.875em;}
 
 	@include query-small {
 		@include margin-left(5em);
 
-		font-size: 2.5em;
 		color: $color-secondary-dark;
+		font-size: 2.5em;
 	}
 
 	@include query-medium {
@@ -138,9 +147,9 @@ footer {
     @include secondary-font;
 
     display: none;
-    text-align: center;
-    font-size: .75em;
-    opacity: .5;
-    color: #fff;
     margin: 1rem;
+    color: #fff;
+    font-size: .75em;
+    text-align: center;
+    opacity: .5;
 }

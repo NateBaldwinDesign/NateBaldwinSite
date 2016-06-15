@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     cssSortConfig = require('./smacss.json'),
     clean = require('gulp-rimraf'),
     zip = require('gulp-zip'),
+    cssnano = require('gulp-cssnano'),
     sourcemaps = require("gulp-sourcemaps"),
     scsslint = require('gulp-scss-lint'),
     importOnce = require('node-sass-import-once'),
@@ -143,11 +144,36 @@ gulp.task('imagemin', function() {
 gulp.task('clean-archive', function() {
   gulp.src(['builds']).pipe(clean());
 });
-// Archive Theme
-gulp.task('archive', ['clean-archive'], function() {
-  return gulp.src('**/*.*')
-    .pipe(zip('nate-baldwin-theme' + nb_package.version + '.zip')) // Need to move files into temp folder first, then run this on the temp folder
-    .pipe(gulp.dest('builds'));
+// Copy to Temp
+gulp.task('copy-php', function() {
+  return gulp.src('*.php')
+    .pipe(gulp.dest('nate-baldwin-theme'));
+});
+gulp.task('copy-img', function() {
+  return gulp.src('img/**/*.*')
+    .pipe(gulp.dest('nate-baldwin-theme/img'));
+});
+gulp.task('copy-external', function() {
+  return gulp.src('external/**/*.*')
+    .pipe(gulp.dest('nate-baldwin-theme/external'));
+});
+gulp.task('copy-fonts', function() {
+  return gulp.src('fonts/**/*.*')
+    .pipe(gulp.dest('nate-baldwin-theme/fonts'));
+});
+gulp.task('copy-js', function() {
+  return gulp.src('js/**/*.*')
+    .pipe(gulp.dest('nate-baldwin-theme/js'));
+});
+gulp.task('copy-parts', function() {
+  return gulp.src('parts/**/*.*')
+    .pipe(gulp.dest('nate-baldwin-theme/parts'));
+});
+gulp.task('copy', ['copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-parts']);
+
+// Clean Temp
+gulp.task('clean-temp', ['archive'], function() {
+  gulp.src(['nate-baldwin-theme']).pipe(clean());
 });
 
 //==========================================
@@ -161,9 +187,15 @@ gulp.task('default', [
 });
 
 gulp.task('build', [
+  'clean-archive',
   'scss',
   'sort-scss',
   'minify-css',
   'svg-sprite',
-  'archive'
-]);
+  'copy'
+], function() {
+  return gulp.src('nate-baldwin-theme/**/*.*')
+    .pipe(zip('nate-baldwin-theme-' + nb_package.version + '.zip')) 
+    .pipe(gulp.dest('builds'));
+  return gulp.src(['nate-baldwin-theme']).pipe(clean());
+});
