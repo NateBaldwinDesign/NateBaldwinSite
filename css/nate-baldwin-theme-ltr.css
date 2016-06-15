@@ -508,6 +508,15 @@ footer {
   @media only screen and (min-width: 32rem) {
     #logo-accent {
       right: -10%; } }
+  @media only screen and (min-width: 62rem) {
+    #logo-accent {
+      width: 28%; } }
+  @media only screen and (min-width: 75rem) {
+    #logo-accent {
+      width: 26%; } }
+  @media only screen and (min-width: 90rem) {
+    #logo-accent {
+      width: 24%; } }
 
 .u-fixed-bottom {
   position: fixed;

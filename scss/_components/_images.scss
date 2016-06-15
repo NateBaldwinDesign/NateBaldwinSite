@@ -26,4 +26,10 @@
 	svg {fill: $color-primary;}
 
 	@include query-xsmall {right: -10%;}
+
+	@include query-medium {width: 28%;}
+
+	@include query-large {width: 26%;}
+
+	@include query-xlarge {width: 24%;}
 }
