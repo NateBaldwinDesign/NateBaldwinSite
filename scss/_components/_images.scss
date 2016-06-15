@@ -1,0 +1,16 @@
+.portrait-wrapper {
+	display: inline-block;
+	position: relative;
+}
+
+.portrait-wrapper--footer {
+	@extend .portrait-wrapper;
+
+	width: 100%;
+}
+
+.portrait {
+	display: block;
+	border-radius: 50%;
+	width: 100%;
+}

@@ -79,6 +79,7 @@ h1 {
 	@include query-small {font-size: 10em;}
 	@include query-medium {font-size: 12em;}
 }
+
 h1::before {
 	display: inline-block;
 	content: ' ';
@@ -90,6 +91,13 @@ h1::before {
 	background: $color-secondary;
 	z-index: -1;
 	opacity: 1;
+}
+
+h2 {
+    font-size: 4em;
+    @include query-xsmall {font-size: 5em;}
+    @include query-small {font-size: 5em;}
+    @include query-medium {font-size: 6em;}
 }
 
 .lead > p {
@@ -111,4 +119,15 @@ h1::before {
 	}
 
 	@include query-medium {font-size: 3em;}
+}
+
+footer {
+    @include secondary-font;
+
+    display: none;
+    text-align: center;
+    font-size: .75em;
+    opacity: .5;
+    color: #fff;
+    margin: 1rem;
 }

@@ -220,10 +220,13 @@ body {
   margin: 0; }
 
 .l-section--primary .l-section__content {
-  background-color: #EC1C24; }
+  background-color: #e13239; }
 
 .l-section--primary .section__angle {
-  fill: #EC1C24; }
+  fill: #e13239; }
+
+.l-section--primary h1, .l-section--primary h2, .l-section--primary h3, .l-section--primary h4, .l-section--primary h5, .l-section--primary h6, .l-section--primary p {
+  color: #fff; }
 
 .l-section--secondary .l-section__content {
   background-color: #d4e0e4; }
@@ -237,12 +240,23 @@ body {
 .l-section--light-gray .section__angle {
   fill: #BDBDBD; }
 
-.l-container {
+.l-container, .l-container--fluid, .l-container--center {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   padding: 40px 60px; }
 
 .l-container--fluid {
+  width: 100%; }
+
+.l-container--center {
   width: 100%;
-  padding: 40px 60px; }
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .l-section--hero {
   height: calc(100vh - 169px);
@@ -257,7 +271,37 @@ body {
 #header-triangle {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  width: 75%; }
+  width: 35%; }
+
+.footer__contact {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; }
+  .footer__contact * {
+    display: block; }
+  @media only screen and (min-width: 32rem) {
+    .footer__contact {
+      width: 50%;
+      margin: 0; } }
+  @media only screen and (min-width: 32rem) {
+    .footer__contact {
+      width: 50%; } }
+  @media only screen and (min-width: 48rem) {
+    .footer__contact {
+      width: 32%; } }
+  @media only screen and (min-width: 75rem) {
+    .footer__contact {
+      width: 22%; } }
+  @media only screen and (min-width: 90rem) {
+    .footer__contact {
+      width: 20%; } }
+
+.footer__cta {
+  text-align: center;
+  margin: .2em 0 .1em; }
 
 .header__logo {
   position: relative;
@@ -342,6 +386,18 @@ h1::before {
   z-index: -1;
   opacity: 1; }
 
+h2 {
+  font-size: 4em; }
+  @media only screen and (min-width: 32rem) {
+    h2 {
+      font-size: 5em; } }
+  @media only screen and (min-width: 48rem) {
+    h2 {
+      font-size: 5em; } }
+  @media only screen and (min-width: 62rem) {
+    h2 {
+      font-size: 6em; } }
+
 .lead > p {
   font-family: "bitterregular", Georgia, serif;
   font-style: normal;
@@ -363,8 +419,30 @@ h1::before {
     .lead > p {
       font-size: 3em; } }
 
+footer {
+  font-family: "bitterregular", Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  display: none;
+  text-align: center;
+  font-size: .75em;
+  opacity: .5;
+  color: #fff;
+  margin: 1rem; }
+
 .social {
-  display: block; }
+  padding-left: 2rem;
+  display: inline-block;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 32rem) {
+    .social {
+      width: 50%;
+      margin: 0; } }
+  @media only screen and (min-width: 48rem) {
+    .social {
+      width: 25%; } }
 
 .social__item {
   display: -webkit-flex;
@@ -375,19 +453,47 @@ h1::before {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  opacity: .8; }
+  opacity: .8;
+  transition: all 0.5s ease-in-out; }
   .social__item:hover, .social__item:focus, .social__item:active, .social__item:active:hover, .social__item:active:focus {
-    opacity: 1; }
+    opacity: 1;
+    transition: all 0.5s ease-in-out; }
+    .social__item:hover .social__icon, .social__item:focus .social__icon, .social__item:active .social__icon, .social__item:active:hover .social__icon, .social__item:active:focus .social__icon {
+      transition: all 0.5s ease-in-out;
+      background-color: #c31d23; }
 
 .social__icon {
   margin-left: 1rem;
-  display: inline-block; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 56px;
+  width: 56px;
+  padding: .75rem;
+  transition: all 0.5s ease-in-out; }
   .social__icon svg {
-    width: 40px;
+    display: block;
+    width: 56px;
     fill: #fff; }
 
 .social__label {
   display: inline-block; }
+
+.portrait-wrapper, .portrait-wrapper--footer {
+  display: inline-block;
+  position: relative; }
+
+.portrait-wrapper--footer {
+  width: 100%; }
+
+.portrait {
+  display: block;
+  border-radius: 50%;
+  width: 100%; }
 
 .u-fixed-bottom {
   position: fixed;

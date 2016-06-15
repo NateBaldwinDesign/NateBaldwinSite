@@ -1,5 +1,16 @@
 .social {
-	display: block;
+	@include padding-right(2rem);
+
+	display: inline-block;
+	width: 75%;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+
+	@include query-xsmall {
+		width: 50%;
+		margin: 0;
+	}
+	@include query-small {width: 25%;}
 }
 
 .social__item {
@@ -8,20 +19,36 @@
 	align-items: center;
 	color: #fff;
 	opacity: .8;
+	transition: $transition-slow;
 
 	&:hover,
 	&:focus,
 	&:active,
 	&:active:hover,
-	&:active:focus {opacity: 1;}
+	&:active:focus {
+		opacity: 1;
+		transition: $transition-slow;
+
+		.social__icon {
+			transition: $transition-slow;
+			background-color: darken($color-primary, 10%);
+		}
+	}
 }
 
 .social__icon {
 	@include margin-right(1rem);
-	display: inline-block;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	height: 56px;
+	width: 56px;
+	padding: .75rem;
+	transition: $transition-slow;
 
 	svg {
-		width: 40px;
+		display: block;
+		width: 56px;
 		fill: #fff;
 	}
 }

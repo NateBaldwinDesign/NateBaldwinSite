@@ -1,10 +1,20 @@
 $container-padding: 40px 60px;
 
 .l-container {
+	display: flex;
+	flex-wrap: wrap;
 	padding: $container-padding;
 }
 
 .l-container--fluid {
+	@extend .l-container;
+
 	width: 100%;
-	padding: $container-padding;
+}
+
+.l-container--center {
+	@extend .l-container;
+
+	width: 100%;
+	justify-content: center;
 }

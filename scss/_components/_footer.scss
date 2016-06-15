@@ -1,0 +1,22 @@
+.footer__contact {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	align-self: center;
+
+	& * {display: block;}
+
+	@include query-xsmall {
+		width: 50%;
+		margin: 0;
+	}
+	@include query-xsmall {width: 50%;}
+	@include query-small {width: 32%;}
+	@include query-large {width: 22%;}
+	@include query-xlarge {width: 20%;}
+}
+
+.footer__cta {
+	text-align: center;
+	margin: .2em 0 .1em
+}

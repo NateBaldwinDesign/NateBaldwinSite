@@ -71,8 +71,11 @@ gulp.task('minify-css', function() {
 // Create SVG Sprite
 //==========================================
 // Optimize SVG images
-gulp.task('svg-imagemin', function() {
-  return gulp.src('icons/svg/**/*.svg')
+gulp.task('clean-sprite', function() {
+  return gulp.src('icons/custom-portfolio-sprite.svg').pipe(clean());
+})
+gulp.task('svg-imagemin', ['clean-sprite'], function() {
+  return gulp.src(['icons/svg/**/*.svg', 'icons/social/**/*.svg'])
     .pipe(svgmin({
       plugins: [{
         removeXMLProcInst: false
@@ -114,7 +117,7 @@ gulp.task('svg-sprite', ['svg-imagemin'], function() {
       }
     }))
     .pipe(rename('custom-portfolio-sprite.svg'))
-    .pipe(gulp.dest('img'));
+    .pipe(gulp.dest('icons'));
 });
 
 //==========================================
