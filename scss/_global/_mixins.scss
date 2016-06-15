@@ -1,3 +1,26 @@
+// Font Mixins
+@mixin primary-font {
+  font-family: $primary-font-stack;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin secondary-font {
+  font-family: $secondary-font-stack;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin secondary-font-italic {
+  font-family: $secondary-font-stack-italic;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin secondary-font-bold {
+  font-family: $secondary-font-stack-bold;
+  font-style: normal;
+  font-weight: 400;
+}
+
 
 // 420 and above
 @mixin query-xsmall {

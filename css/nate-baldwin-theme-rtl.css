@@ -195,6 +195,11 @@ td,
 th {
   padding: 0; }
 
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
 body {
   min-height: 100vh; }
 
@@ -240,13 +245,19 @@ body {
   padding: 40px 60px; }
 
 .l-section--hero {
-  height: calc(100vh - 300px);
+  height: calc(100vh - 169px);
+  min-height: 300px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+
+#header-triangle {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 75%; }
 
 .header__logo {
   position: relative;
@@ -301,7 +312,8 @@ h4,
 h5,
 h6 {
   font-family: "signalistregular", "bitterregular", Georgia, serif;
-  font-weight: normal;
+  font-style: normal;
+  font-weight: 400;
   display: inline-block;
   z-index: 1;
   margin: .4em 0 .2em; }
@@ -329,6 +341,53 @@ h1::before {
   background: #d4e0e4;
   z-index: -1;
   opacity: 1; }
+
+.lead > p {
+  font-family: "bitterregular", Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 3em;
+  font-size: 1.25em;
+  line-height: 1.2;
+  width: 22ex;
+  color: #61777e; }
+  @media only screen and (min-width: 32rem) {
+    .lead > p {
+      font-size: 1.875em; } }
+  @media only screen and (min-width: 48rem) {
+    .lead > p {
+      margin-right: 5em;
+      font-size: 2.5em;
+      color: #80969d; } }
+  @media only screen and (min-width: 62rem) {
+    .lead > p {
+      font-size: 3em; } }
+
+.social {
+  display: block; }
+
+.social__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  opacity: .8; }
+  .social__item:hover, .social__item:focus, .social__item:active, .social__item:active:hover, .social__item:active:focus {
+    opacity: 1; }
+
+.social__icon {
+  margin-left: 1rem;
+  display: inline-block; }
+  .social__icon svg {
+    width: 40px;
+    fill: #fff; }
+
+.social__label {
+  display: inline-block; }
 
 .u-fixed-bottom {
   position: fixed;

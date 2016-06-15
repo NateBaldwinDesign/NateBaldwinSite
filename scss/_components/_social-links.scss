@@ -1,0 +1,31 @@
+.social {
+	display: block;
+}
+
+.social__item {
+	display: flex;
+	text-decoration: none;
+	align-items: center;
+	color: #fff;
+	opacity: .8;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:focus {opacity: 1;}
+}
+
+.social__icon {
+	@include margin-right(1rem);
+	display: inline-block;
+
+	svg {
+		width: 40px;
+		fill: #fff;
+	}
+}
+
+.social__label {
+	display: inline-block;
+}
