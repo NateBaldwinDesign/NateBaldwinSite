@@ -79,19 +79,19 @@ h1 {
 	@include query-small {font-size: 10em;}
 	@include query-medium {font-size: 12em;}
 }
-
-h1::before {
-	display: inline-block;
-	content: ' ';
-	height: 1.6ex;
-	left: 0;
-	margin-top: .3ex;
-	min-width: 8.5ex;
-	position: absolute;
-	background: $color-secondary;
-	z-index: -1;
-	opacity: 1;
-}
+// Highlight effect for h1
+// h1::before {
+// 	display: inline-block;
+// 	content: ' ';
+// 	height: 1.6ex;
+// 	left: 0;
+// 	margin-top: .3ex;
+// 	min-width: 8.5ex;
+// 	position: absolute;
+// 	background: $color-secondary;
+// 	z-index: -1;
+// 	opacity: 1;
+// }
 
 h2 {
     font-size: 4em;

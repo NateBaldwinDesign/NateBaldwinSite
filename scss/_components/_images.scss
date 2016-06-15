@@ -14,3 +14,16 @@
 	border-radius: 50%;
 	width: 100%;
 }
+
+#logo-accent {
+	position: absolute;
+	display: block;
+	top: -20px;
+	right: -15%;
+	width: 30%;
+	opacity: .125;
+
+	svg {fill: $color-primary;}
+
+	@include query-xsmall {right: -10%;}
+}

@@ -200,6 +200,9 @@ body {
   margin: 0;
   padding: 0; }
 
+html {
+  overflow-x: hidden; }
+
 body {
   min-height: 100vh; }
 
@@ -374,18 +377,6 @@ h1 {
     h1 {
       font-size: 12em; } }
 
-h1::before {
-  display: inline-block;
-  content: ' ';
-  height: 1.6ex;
-  left: 0;
-  margin-top: .3ex;
-  min-width: 8.5ex;
-  position: absolute;
-  background: #d4e0e4;
-  z-index: -1;
-  opacity: 1; }
-
 h2 {
   font-size: 4em; }
   @media only screen and (min-width: 32rem) {
@@ -494,6 +485,19 @@ footer {
   display: block;
   border-radius: 50%;
   width: 100%; }
+
+#logo-accent {
+  position: absolute;
+  display: block;
+  top: -20px;
+  right: -15%;
+  width: 30%;
+  opacity: .125; }
+  #logo-accent svg {
+    fill: #e13239; }
+  @media only screen and (min-width: 32rem) {
+    #logo-accent {
+      right: -10%; } }
 
 .u-fixed-bottom {
   position: fixed;
