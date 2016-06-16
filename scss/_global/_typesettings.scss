@@ -270,7 +270,7 @@ body {
   // sets a unitless line-height as a multiple of the vertical grid.
   h1, .h1 {
     margin-bottom: emRhythm(1, $ms-up3); // [1]
-    @include setType(6, $ms-up4); // [2]  default ms-up2
+    @include setType(6, $ms-up3); // [2]  default ms-up2
     line-height: .665; // override typeset's line height for Signalist
 
     @include query-small {
