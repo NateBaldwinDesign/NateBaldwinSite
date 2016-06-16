@@ -229,15 +229,15 @@ body {
     color: $text-color;
   }
 
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
+  h1, .h1 {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
     font-family: $font-sans;
     font-weight: normal;
   }
+  h2, .h2,
+  h3, .h3,
   h4, .h4,
   h5, .h5,
   h6, .h6 {
@@ -259,18 +259,39 @@ body {
   // [5] Sets the type to one of the modular scale values and the second argument
   // sets a unitless line-height as a multiple of the vertical grid.
   h1, .h1 {
-    margin-bottom: emRhythm(1, $ms-up2); // [1]
-    @include setType(6, $ms-up2); // [2]  default ms-up2
+    margin-bottom: emRhythm(1, $ms-up3); // [1]
+    @include setType(6, $ms-up4); // [2]  default ms-up2
+    line-height: .665; // override typeset's line height for Signalist
 
     @include query-small {
       // [3]
       margin-bottom: emRhythm(1, $ms-up3); // [4]
-      @include setType(8, $ms-up3); // [5] default ms-up3
+      @include setType(8, $ms-up5); // [5] default ms-up3
+      line-height: .665; // override typeset's line height for Signalist
     }
 
     @include query-medium {
-      margin-bottom: emRhythm(1, $ms-up4);
-      @include setType(10, $ms-up4); // default ms-up4
+      margin-bottom: emRhythm(1, $ms-up3);
+      @include setType(10, $ms-up6); // default ms-up4
+      line-height: .665; // override typeset's line height for Signalist
+    }
+  }
+  // Custom Type for Homepage Healine
+  h1.headline, .h1.headline {
+    margin-bottom: emRhythm(1, $ms-up2); // [1]
+    @include setType(6, $ms-up5); // [2]  default ms-up2
+    line-height: .665; // override typeset's line height for Signalist
+
+    @include query-small {
+      margin-bottom: emRhythm(1, $ms-up2); // [4]
+      @include setType(8, $ms-up6); // [5] default ms-up3
+      line-height: .665; // override typeset's line height for Signalist
+    }
+
+    @include query-medium {
+      margin-bottom: emRhythm(1, $ms-up2);
+      @include setType(10, $ms-up7); // default ms-up4
+      line-height: .665; // override typeset's line height for Signalist
     }
   }
 
@@ -286,6 +307,21 @@ body {
     @include query-medium {
       margin-bottom: emRhythm(1, $ms-up3);
       @include setType(8, $ms-up3);
+    }
+  }
+
+  h2.lead, .h2.lead {
+    margin-bottom: emRhythm(1, $ms-up1);
+    @include setType(5, $ms-up1);
+
+    @include query-small {
+      margin-bottom: emRhythm(1, $ms-up1);
+      @include setType(6, $ms-up2)
+    }
+
+    @include query-medium {
+      margin-bottom: emRhythm(1, $ms-up1);
+      @include setType(9, $ms-up3);
     }
   }
 
@@ -308,6 +344,17 @@ body {
   h6, .h6 {
     margin-bottom: emRhythm(1);
     @include setType(4);
+  }
+
+  hgroup {
+    padding-bottom: emRhythm(2);
+
+    @include query-small {
+      padding-bottom: emRhythm(4);
+    }
+    @include query-medium {
+      padding-bottom: emRhythm(3);
+    }
   }
 
   p {
@@ -416,11 +463,11 @@ body {
   // Creates horizontal rules that obey the baseline.
   // [1] Zero outs the user agent border
   hr {
-    margin-top: emRhythm(4);
+    margin-top: emRhythm(5);
     margin-bottom: 0;
     border: none; // [1]
     border-top-color: $text-color;
     border-top-style: solid;
-    @include rhythmBorderTop(1px, 4);
+    @include rhythmBorderTop(1px, 6);
   }
 }
