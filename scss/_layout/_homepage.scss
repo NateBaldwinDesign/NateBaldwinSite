@@ -1,9 +1,7 @@
 .l-section--hero {
 	display: block;
-	height: 30rem;
-}
+	margin: calc(#{$baseline} * 3) $baseline;
 
-#header-triangle {
-	width: 35%;
-	transform: rotate(180deg);
+	@include query-small { margin: calc(#{$baseline} * 6) calc(#{$baseline} * 2);}
+	@include query-medium { margin: calc(#{$baseline} * 5) calc(#{$baseline} * 2);}
 }

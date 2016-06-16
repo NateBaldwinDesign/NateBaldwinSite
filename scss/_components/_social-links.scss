@@ -4,7 +4,7 @@
 	display: inline-block;
 	width: 75%;
 	margin: 0 auto;
-	margin-bottom: 2rem;
+	margin-bottom: calc(#{$baseline * 2});
 
 	@include query-xsmall {
 		width: 50%;
@@ -21,6 +21,7 @@
 	text-decoration: none;
 	opacity: .8;
 	align-items: center;
+	margin-bottom: calc(#{$baseline / 2});
 
 	&:hover,
 	&:focus,
@@ -41,8 +42,8 @@
 	@include margin-right(1rem);
 
 	display: flex;
-	width: 56px;
-	height: 56px;
+	width: calc(#{$baseline * 2});
+	height: calc(#{$baseline * 2});
 	padding: .75rem;
 	transition: $transition-slow;
 	border-radius: 50%;
@@ -50,7 +51,8 @@
 
 	svg {
 		display: block;
-		width: 56px;
+		width: calc(#{$baseline * 2});
+		height: calc(#{$baseline * 2});
 		fill: #fff;
 	}
 }

@@ -242,11 +242,6 @@ External fonts
 /* Sass Mixin that generates a Baseline Grid */
 /* by: Mike Morrison, Soholaunch.com */
 /* You don't have to leave this credit comment in, but it would be nice of you. */
-body {
-  background-image: -webkit-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 60px, transparent 20px), -webkit-linear-gradient(top, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
-  background-size: 80px 100%, 100% 1.71429em;
-  background-position: 10px 0px; }
-
 html,
 body {
   margin: 0;
@@ -489,30 +484,37 @@ body {
     content: " ";
     position: absolute;
     height: 10rem;
-    top: -2rem;
+    top: calc(1.71429em * -1.25);
     left: -200%;
     right: -200%;
     -webkit-transform: skewY(-3deg);
             transform: skewY(-3deg); }
+    @media only screen and (min-width: 62rem) {
+      .l-section::before,
+      .l-section--primary::before,
+      .l-section--secondary::before,
+      .l-section--light-gray::before {
+        top: calc(1.71429em * -1.75); } }
+    @media only screen and (min-width: 75rem) {
+      .l-section::before,
+      .l-section--primary::before,
+      .l-section--secondary::before,
+      .l-section--light-gray::before {
+        top: calc(1.71429em * -2); } }
 
 .l-section__content {
   display: block;
   width: 100%;
-  margin: -4px 0 0; }
-
-.section__angle {
-  position: relative;
-  width: 100%;
-  margin: 0; }
+  margin: -2px 0 0; }
 
 .l-section--primary::before {
-  background-color: rgba(225, 50, 57, 0.5); }
+  background-color: #cd4349; }
 
 .l-section--primary .l-section__content {
-  background-color: rgba(225, 50, 57, 0.5); }
+  background-color: #cd4349; }
 
 .l-section--primary .section__angle {
-  fill: #e13239; }
+  fill: #cd4349; }
 
 .l-section--primary h1, .l-section--primary h2, .l-section--primary h3, .l-section--primary h4, .l-section--primary h5, .l-section--primary h6, .l-section--primary p {
   color: #fff; }
@@ -533,7 +535,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 1.375rem 2.75rem;
+  padding: 1.71429em;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
@@ -549,12 +551,13 @@ body {
 
 .l-section--hero {
   display: block;
-  height: 30rem; }
-
-#header-triangle {
-  width: 35%;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  margin: calc(1.71429em * 3) 1.71429em; }
+  @media only screen and (min-width: 48rem) {
+    .l-section--hero {
+      margin: calc(1.71429em * 6) calc(1.71429em * 2); } }
+  @media only screen and (min-width: 62rem) {
+    .l-section--hero {
+      margin: calc(1.71429em * 5) calc(1.71429em * 2); } }
 
 .footer__contact {
   display: block;
@@ -613,7 +616,7 @@ footer {
   display: inline-block;
   width: 75%;
   margin: 0 auto;
-  margin-bottom: 2rem; }
+  margin-bottom: calc(3.42858em); }
   @media only screen and (min-width: 32rem) {
     .social {
       width: 50%;
@@ -632,21 +635,22 @@ footer {
   opacity: .8;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-bottom: calc(0.85715em); }
   .social__item:hover, .social__item:focus, .social__item:active, .social__item:active:hover, .social__item:active:focus {
     transition: all 0.5s ease-in-out;
     opacity: 1; }
     .social__item:hover .social__icon, .social__item:focus .social__icon, .social__item:active .social__icon, .social__item:active:hover .social__icon, .social__item:active:focus .social__icon {
       transition: all 0.5s ease-in-out;
-      background-color: #c31d23; }
+      background-color: #af2e34; }
 
 .social__icon {
   margin-left: 1rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 56px;
-  height: 56px;
+  width: calc(3.42858em);
+  height: calc(3.42858em);
   padding: .75rem;
   transition: all 0.5s ease-in-out;
   border-radius: 50%;
@@ -655,7 +659,8 @@ footer {
           align-items: center; }
   .social__icon svg {
     display: block;
-    width: 56px;
+    width: calc(3.42858em);
+    height: calc(3.42858em);
     fill: #fff; }
 
 .social__label {
@@ -681,7 +686,7 @@ footer {
   width: 30%;
   opacity: .125; }
   #logo-accent svg {
-    fill: #e13239; }
+    fill: #cd4349; }
   @media only screen and (min-width: 32rem) {
     #logo-accent {
       right: -10%; } }

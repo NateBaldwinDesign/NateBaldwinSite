@@ -7,31 +7,28 @@
 		content: " ";
 		position: absolute;
 		height: 10rem;
-		top: -2rem;
+		top: calc(#{$baseline} * -1.25);
 		left: -200%;
 		right: -200%;
 		transform: skewY(-3deg);
+
+		@include query-medium {top: calc(#{$baseline} * -1.75);}
+		@include query-large {top: calc(#{$baseline} * -2);}
 	}
 }
 
 .l-section__content {
 	display: block;
 	width: 100%;
-	margin: -4px 0 0;
-}
-
-.section__angle {
-	position: relative;
-	width: 100%;
-	margin: 0;
+	margin: -2px 0 0;
 }
 
 .l-section--primary {
 	@extend %l-section;
 
-	&::before {background-color: rgba($color-primary, .5);}
+	&::before {background-color: $color-primary;}
 
-	.l-section__content {background-color: rgba($color-primary, .5);}
+	.l-section__content {background-color: $color-primary;}
 
 	.section__angle {fill: $color-primary;}
 
