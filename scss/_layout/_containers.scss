@@ -4,6 +4,7 @@ $container-padding: $baseline;
 	display: flex;
 	padding: $container-padding;
 	flex-wrap: wrap;
+	overflow-x: hidden;
 }
 
 .l-container--fluid {

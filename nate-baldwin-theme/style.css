@@ -247,11 +247,12 @@ External fonts
 html,
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100%; }
 
 html {
-  font-size: 100%;
-  overflow-x: hidden; }
+  font-size: 100%; }
 
 /* Typesettings */
 html {
@@ -489,10 +490,11 @@ body {
     position: absolute;
     height: 10rem;
     top: calc(1.71429em * -1.25);
-    left: -200%;
-    right: -200%;
+    left: 0;
+    right: 0;
     -webkit-transform: skewY(-3deg);
-            transform: skewY(-3deg); }
+            transform: skewY(-3deg);
+    z-index: -1; }
     @media only screen and (min-width: 62rem) {
       .l-section::before,
       .l-section--primary::before,
@@ -542,7 +544,8 @@ body {
   padding: 1.71429em;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  overflow-x: hidden; }
 
 .l-container--fluid {
   width: 100%; }
@@ -621,7 +624,7 @@ footer {
   display: inline-block;
   width: 75%;
   margin: 0 auto;
-  margin-bottom: 2rem; }
+  margin-bottom: calc(3.42858em); }
   @media only screen and (min-width: 32rem) {
     .social {
       width: 50%;
@@ -640,7 +643,8 @@ footer {
   opacity: .8;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-bottom: calc(0.85715em); }
   .social__item:hover, .social__item:focus, .social__item:active, .social__item:active:hover, .social__item:active:focus {
     transition: all 0.5s ease-in-out;
     opacity: 1; }
@@ -653,8 +657,8 @@ footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 56px;
-  height: 56px;
+  width: calc(3.42858em);
+  height: calc(3.42858em);
   padding: .75rem;
   transition: all 0.5s ease-in-out;
   border-radius: 50%;
@@ -663,7 +667,8 @@ footer {
           align-items: center; }
   .social__icon svg {
     display: block;
-    width: 56px;
+    width: calc(3.42858em);
+    height: calc(3.42858em);
     fill: #fff; }
 
 .social__label {
