@@ -62,9 +62,9 @@ gulp.task('scss', ['css-clean'], function() {
 });
 //minifiy css
 gulp.task('minify-css', function() {
-  return gulp.src('css/custom-portfolio.css')
+  return gulp.src('css/nate-baldwin-theme-ltr.css')
     .pipe(cssnano())
-    .pipe(rename("custom-portfolio.min.css"))
+    .pipe(rename("nate-baldwin-theme-ltr.min.css"))
     .pipe(gulp.dest('css'));
 });
 
@@ -169,7 +169,16 @@ gulp.task('copy-parts', function() {
   return gulp.src('parts/**/*.*')
     .pipe(gulp.dest('nate-baldwin-theme/parts'));
 });
-gulp.task('copy', ['copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-parts']);
+gulp.task('copy-icons', function() {
+  return gulp.src('icons/**/*.*')
+    .pipe(gulp.dest('nate-baldwin-theme/icons'));
+});
+gulp.task('copy-css', function() {
+  return gulp.src('css/nate-baldwin-theme-ltr.css')
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest('nate-baldwin-theme'));
+});
+gulp.task('copy', ['copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css']);
 
 // Clean Temp
 gulp.task('clean-temp', ['archive'], function() {
