@@ -7,6 +7,7 @@ Version: 		2.0.0
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
+/* Resets */
 @import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic);
 * {
   box-sizing: border-box; }
@@ -197,6 +198,7 @@ td,
 th {
   padding: 0; }
 
+/* Site CSS Globals */
 /* ---------------------------------------------------------------------------------------------------------- 
 Font-Face ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
@@ -251,6 +253,7 @@ html {
   font-size: 100%;
   overflow-x: hidden; }
 
+/* Typesettings */
 html {
   font-size: 87.5%; }
 
@@ -468,6 +471,7 @@ hr {
   border-top-width: 1px;
   padding-top: 2.5em; }
 
+/* Site CSS Layouts */
 body {
   min-height: 100vh; }
 
@@ -559,6 +563,7 @@ body {
     .l-section--hero {
       margin: calc(1.71429em * 5) calc(1.71429em * 2); } }
 
+/* Site CSS Components */
 .footer__contact {
   display: block;
   width: 80%;
@@ -611,61 +616,6 @@ footer {
   text-align: center;
   opacity: .5; }
 
-.social {
-  padding-left: 2rem;
-  display: inline-block;
-  width: 75%;
-  margin: 0 auto;
-  margin-bottom: calc(3.42858em); }
-  @media only screen and (min-width: 32rem) {
-    .social {
-      width: 50%;
-      margin: 0; } }
-  @media only screen and (min-width: 48rem) {
-    .social {
-      width: 25%; } }
-
-.social__item {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  transition: all 0.5s ease-in-out;
-  color: #fff;
-  text-decoration: none;
-  opacity: .8;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: calc(0.85715em); }
-  .social__item:hover, .social__item:focus, .social__item:active, .social__item:active:hover, .social__item:active:focus {
-    transition: all 0.5s ease-in-out;
-    opacity: 1; }
-    .social__item:hover .social__icon, .social__item:focus .social__icon, .social__item:active .social__icon, .social__item:active:hover .social__icon, .social__item:active:focus .social__icon {
-      transition: all 0.5s ease-in-out;
-      background-color: #af2e34; }
-
-.social__icon {
-  margin-left: 1rem;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: calc(3.42858em);
-  height: calc(3.42858em);
-  padding: .75rem;
-  transition: all 0.5s ease-in-out;
-  border-radius: 50%;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .social__icon svg {
-    display: block;
-    width: calc(3.42858em);
-    height: calc(3.42858em);
-    fill: #fff; }
-
-.social__label {
-  display: inline-block; }
-
 .portrait-wrapper, .portrait-wrapper--footer {
   display: inline-block;
   position: relative; }
@@ -700,6 +650,7 @@ footer {
     #logo-accent {
       width: 24%; } }
 
+/* Site CSS Utilities */
 .u-fixed-bottom {
   position: fixed;
   bottom: 0; }

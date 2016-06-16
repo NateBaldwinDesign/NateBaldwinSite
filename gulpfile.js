@@ -210,8 +210,6 @@ gulp.task('default', [
 gulp.task('build', [
   'clean-archive',
   'scss',
-  'sort-scss',
-  'minify-css',
   'svg-sprite',
   'copy'
 ], function() {

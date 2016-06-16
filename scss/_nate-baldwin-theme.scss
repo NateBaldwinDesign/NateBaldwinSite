@@ -6,32 +6,32 @@ Version: 		2.0.0
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
-// Resets
+/* Resets */
 @import '_vendor/_reset';
 @import '_vendor/_normalize';
 
-// Site CSS Globals
+/* Site CSS Globals */
 @import '_global/_colors';
 @import '_global/_fonts';
 @import '_global/_variables';
 @import '_global/_mixins';
 @import '_global/_global';
 
-//Typesettings
+/* Typesettings */
 @import '_global/_typesettings';
 
-// Site CSS Layouts
+/* Site CSS Layouts */
 @import '_layout/_body';
 @import '_layout/_sections';
 @import '_layout/_containers';
 @import '_layout/_homepage';
 
-// Site CSS Components
+/* Site CSS Components */
 @import '_components/_footer';
 @import '_components/_header-logo';
 @import '_components/_typography';
 @import '_components/_social-links';
 @import '_components/_images';
 
-// Site CSS Utilities
+/* Site CSS Utilities */
 @import '_utilities/_layout';
