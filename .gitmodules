@@ -1,3 +1,6 @@
 [submodule "sassline"]
 	path = sassline
 	url = https://github.com/jakegiltsoff/sassline.git
+[submodule "typesettings"]
+	path = typesettings
+	url = https://github.com/ianrose/typesettings.git

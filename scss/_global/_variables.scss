@@ -1,13 +1,25 @@
-$baseline: 1rem;
-
 // Font Variables
 $primary-font-stack: 'signalistregular', 'bitterregular', Georgia, serif;
 $secondary-font-stack: 'bitterregular', Georgia, serif;
 $secondary-font-stack-italic: 'bitteritalic', Georgia, serif;
 $secondary-font-stack-bold: 'bitterbold', Georgia, serif;
-
 $monospace-font: Courier, monospace;
-$base-font-size: .875rem;
+
+$baseline: 1.71429em;			// 1.375 		= 22px
+								// 1.71429em 	= 27.42864px
+
+// Your settings for Typesettings :)
+$font-sans: $primary-font-stack;
+$font-serif: $secondary-font-stack;
+$font-mono: 'Lucida Console', Monaco, monospace;
+$text-color: #000;
+$base-vertical-unit: 6px;	// Default is 6
+$base-line-multi: 4; 		// Default is 4
+$base-font-size: 14px; 		// Default is 16px
+$ms-ratio: 1.875;			// Default is 1.414
+$paragraph-indent: true;
+$paragraph-justify: true;
+$load-typesetted: true;
 
 // Breakpoints 
 $bp-xsmall:   32rem;   	  // 512px

@@ -29,9 +29,9 @@
 .l-section--primary {
 	@extend %l-section;
 
-	&::before {background-color: $color-primary;}
+	&::before {background-color: rgba($color-primary, .5);}
 
-	.l-section__content {background-color: $color-primary;}
+	.l-section__content {background-color: rgba($color-primary, .5);}
 
 	.section__angle {fill: $color-primary;}
 
