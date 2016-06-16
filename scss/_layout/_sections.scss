@@ -1,6 +1,17 @@
 .l-section,
 %l-section {
+	position: relative;
 	width: 100%;
+
+	&::before {
+		content: " ";
+		position: absolute;
+		height: 10rem;
+		top: -2rem;
+		left: -200%;
+		right: -200%;
+		transform: skewY(-3deg);
+	}
 }
 
 .l-section__content {
@@ -17,6 +28,8 @@
 
 .l-section--primary {
 	@extend %l-section;
+
+	&::before {background-color: $color-primary;}
 
 	.l-section__content {background-color: $color-primary;}
 
