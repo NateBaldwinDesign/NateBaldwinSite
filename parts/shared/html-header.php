@@ -15,4 +15,4 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-	<?php echo file_get_contents('icons/custom-portfolio-sprite.svg'); ?>
+	<?php echo file_get_contents('wp-content/themes/NateBaldwinSite/icons/custom-portfolio-sprite.svg'); ?>

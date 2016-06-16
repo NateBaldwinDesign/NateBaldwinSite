@@ -19,6 +19,7 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     imagemin = require('gulp-imagemin'),
     nb_package = require('./package.json'),
+    insert = require('gulp-insert'),
     watchOptions = {interval: 1000}
 
 //==========================================
@@ -119,6 +120,17 @@ gulp.task('svg-sprite', ['svg-imagemin'], function() {
     }))
     .pipe(rename('custom-portfolio-sprite.svg'))
     .pipe(gulp.dest('icons'));
+});
+// Change sprite to PHP file
+gulp.task('sprite-php-wrap', ['svg-sprite'], function() {
+  return gulp.src('icons/custom-portfolio-sprite.svg')
+    .pipe(insert.wrap('<?php ?> ', '<?php ?>'))
+    .pipe(gulp.dest('parts/shared'));
+});
+gulp.task('sprite-php', ['sprite-php-wrap'], function() {
+  gulp.src("parts/shared/custom-portfolio-sprite.svg")
+    .pipe(rename("custom-portfolio-sprite.php"))
+    .pipe(gulp.dest("parts/shared"))
 });
 
 //==========================================
