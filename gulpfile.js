@@ -190,7 +190,11 @@ gulp.task('copy-css', function() {
     .pipe(rename('style.css'))
     .pipe(gulp.dest('nate-baldwin-theme'));
 });
-gulp.task('copy', ['copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css']);
+gulp.task('copy-screenshot', function() {
+  return gulp.src('screenshot.png')
+    .pipe(gulp.dest('nate-baldwin-theme'));
+});
+gulp.task('copy', ['copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css', 'copy-screenshot']);
 
 // Clean Temp
 gulp.task('clean-temp', ['archive'], function() {

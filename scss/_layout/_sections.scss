@@ -11,6 +11,7 @@
 		left: -200%;
 		right: -200%;
 		transform: skewY(-3deg);
+		z-index: -1;
 
 		@include query-medium {top: calc(#{$baseline} * -1.75);}
 		@include query-large {top: calc(#{$baseline} * -2);}
