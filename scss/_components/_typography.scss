@@ -1,0 +1,16 @@
+
+.fancy-amp {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-style: italic;
+}
+
+footer {
+    @include secondary-font;
+
+    display: none;
+    margin: 1rem;
+    color: #fff;
+    font-size: .75em;
+    text-align: center;
+    opacity: .5;
+}

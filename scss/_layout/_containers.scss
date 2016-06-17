@@ -1,0 +1,21 @@
+$container-padding: $baseline;
+
+.l-container {
+	display: flex;
+	padding: $container-padding;
+	flex-wrap: wrap;
+	overflow-x: hidden;
+}
+
+.l-container--fluid {
+	@extend .l-container;
+
+	width: 100%;
+}
+
+.l-container--center {
+	@extend .l-container;
+
+	width: 100%;
+	justify-content: center;
+}

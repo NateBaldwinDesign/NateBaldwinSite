@@ -1,0 +1,7 @@
+.l-section--hero {
+	display: block;
+	margin: calc(#{$baseline} * 3) $baseline;
+
+	@include query-small { margin: calc(#{$baseline} * 6) calc(#{$baseline} * 2);}
+	@include query-medium { margin: calc(#{$baseline} * 5) calc(#{$baseline} * 2);}
+}
