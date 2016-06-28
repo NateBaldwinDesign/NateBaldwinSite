@@ -39,6 +39,10 @@
 	margin: -2px 0 0;
 }
 
+.l-section--pageheader {
+	padding-top: calc(#{$baseline} * 2);
+}
+
 .l-section--primary {
 	@extend %l-section;
 

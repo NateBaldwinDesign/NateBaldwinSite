@@ -1,6 +1,6 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header' ) ); ?>
 
-<div class="l-section--primary">
+<div class="l-section--primary l-section--pageheader">
 	<div class="l-container--fluid u-flex-center">
 		<hgroup>
 			<h1 class="heading"><?php the_title(); ?></h1>

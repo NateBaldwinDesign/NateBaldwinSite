@@ -403,7 +403,8 @@ p {
   margin-bottom: 1.71429em;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: 41.14286em; }
+  max-width: 41.14286em;
+  font-size: 1.125em; }
   @media only screen and (min-width: 48rem) {
     p {
       text-align: justify; } }
@@ -424,16 +425,19 @@ strong {
   font-weight: bold; }
 
 blockquote {
-  margin-top: 1.71429em;
-  margin-bottom: 1.71429em;
+  margin-top: 0.42857em;
+  margin-bottom: 0.42857em;
   margin-left: 0;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 1.71429em;
-  border-left: 6px solid gray;
-  font-family: "signalistregular", "bitterregular", Georgia, serif; }
+  border-left: 6px solid #cd4349;
+  font-family: "signalistregular", "bitterregular", Georgia, serif;
+  font-size: 2.25em;
+  line-height: 0.95238;
+  font-size: 3.5em; }
   blockquote p {
-    margin-bottom: 0.85714em; }
+    margin-bottom: 0.42857em; }
   blockquote footer cite:before {
     content: " – "; }
 
@@ -527,6 +531,9 @@ body {
   display: block;
   width: 100%;
   margin: -2px 0 0; }
+
+.l-section--pageheader {
+  padding-top: calc(1.71429em * 2); }
 
 .l-section--primary::before {
   background-color: #cd4349; }
