@@ -2,7 +2,7 @@ $container-padding: $baseline;
 
 .l-container {
 	display: flex;
-	padding: $container-padding;
+	padding: $container-padding $container-padding calc(#{$container-padding} * 3);
 	flex-wrap: wrap;
 	overflow-x: hidden;
 }
