@@ -224,7 +224,7 @@ body {
   body {
     margin: 0;
     padding: 0;
-    font-family: $font-serif;
+    font-family: $font-sans;
     font-weight: 400;
     color: $text-color;
   }
@@ -243,7 +243,7 @@ body {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
-    font-family: $font-sans;
+    font-family: $font-serif;
     font-weight: normal;
   }
   h2, .h2,
@@ -254,8 +254,8 @@ body {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
-    font-family: $font-serif;
-    font-weight: bold;
+    font-family: $font-sans;
+    font-weight: 400;
   }
 
   // [1] Applies a margin bottom that is a multiple of the vertical grid in EMs.

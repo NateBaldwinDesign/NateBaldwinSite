@@ -2,18 +2,19 @@
 %l-section {
 	position: relative;
 	width: 100%;
+	z-index: 0;
 
 	&::before {
 		content: " ";
 		position: absolute;
 		height: 10rem;
-		top: calc(#{$baseline} * -1.25);
+		top: calc(#{$baseline} * -1.5125);
 		left: 0;
 		right: 0;
-		transform: skewY(-3deg);
+		transform: skewY(-4deg);
 		z-index: -1;
 
-		@include query-medium {top: calc(#{$baseline} * -1.75);}
+		@include query-medium {top: calc(#{$baseline} * -1.8215);}
 		@include query-large {top: calc(#{$baseline} * -2);}
 	}
 }

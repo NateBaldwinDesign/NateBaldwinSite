@@ -1,7 +1,17 @@
 .l-section--hero {
 	display: block;
-	margin: calc(#{$baseline} * 3) $baseline;
+	margin: 0;
+	padding: calc(#{$baseline} * 3) $baseline calc(#{$baseline} * 5);
+    background-image: url("img/sky.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: inherit;
 
-	@include query-small { margin: calc(#{$baseline} * 6) calc(#{$baseline} * 2);}
-	@include query-medium { margin: calc(#{$baseline} * 5) calc(#{$baseline} * 2);}
+    hgroup {text-align: center;}
+
+	@include query-small { 
+		padding: calc(#{$baseline} * 6) calc(#{$baseline} * 2) calc(#{$baseline} * 8);
+		background-attachment: fixed;
+	}
+	@include query-medium { padding: calc(#{$baseline} * 6) calc(#{$baseline} * 2) calc(#{$baseline} * 8);}
 }

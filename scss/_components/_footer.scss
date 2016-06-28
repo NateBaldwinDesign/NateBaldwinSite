@@ -1,22 +1,30 @@
 .footer__contact {
-	display: block;
-	width: 80%;
-	margin: 0 auto;
-	align-self: center;
+	position: absolute;
+    top: -110px;
+    right: 10%;
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
 
 	& * {display: block;}
 
 	@include query-xsmall {
-		width: 50%;
-		margin: 0;
+	    width: 160px;
+	    right: 16%;
+	    margin: 0;
 	}
-	@include query-xsmall {width: 50%;}
 
-	@include query-small {width: 32%;}
+	@include query-small {width: 180px;}
 
-	@include query-large {width: 22%;}
+	@include query-medium {
+	    top: -140px;
+    	width: 240px;
+	}
 
-	@include query-xlarge {width: 20%;}
+	@include query-large {width: 240px;}
 }
 
 .footer__cta {
