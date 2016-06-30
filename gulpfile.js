@@ -23,7 +23,14 @@ var gulp = require('gulp'),
     replace = require('gulp-replace'),
     packageJson = require('./package.json'),
     version = packageJson.version,
+    bump = require('gulp-bump'),
     watchOptions = {interval: 1000};
+
+gulp.task('bump', function(){
+  gulp.src('./package.json')
+  .pipe(bump({type:'prerelease'}))
+  .pipe(gulp.dest('./'));
+});
 
 //==========================================
 // SASS preprocessing
@@ -214,6 +221,6 @@ gulp.task('copy', ['clean-archive', 'copy-php', 'copy-img', 'copy-external', 'co
     .pipe(gulp.dest('builds'));
 });
 
-gulp.task('default', ['copy'], function() {
+gulp.task('default', ['bump', 'copy'], function() {
     return gulp.src(['nate-baldwin-theme']).pipe(clean());
 })
