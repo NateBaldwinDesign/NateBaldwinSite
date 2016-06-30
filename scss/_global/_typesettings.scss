@@ -239,14 +239,14 @@ body {
     text-rendering: optimizeLegibility; 
   }
 
-  h1, .h1 {
+  h1, .h1,
+  h2, .h2 {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
     font-family: $font-serif;
     font-weight: normal;
   }
-  h2, .h2,
   h3, .h3,
   h4, .h4,
   h5, .h5,

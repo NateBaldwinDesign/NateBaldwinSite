@@ -36,7 +36,7 @@ gulp.task('bump', function(){
 // SASS preprocessing
 //==========================================
 // Clean existing CSS before compiling
-gulp.task('css-clean', function() {
+gulp.task('css-clean', ['bump'], function() {
   return gulp.src('css/**/*.css*').pipe(clean());
 });
 // Sorts properties form SCSS files
@@ -221,6 +221,6 @@ gulp.task('copy', ['clean-archive', 'copy-php', 'copy-img', 'copy-external', 'co
     .pipe(gulp.dest('builds'));
 });
 
-gulp.task('default', ['bump', 'copy'], function() {
+gulp.task('default', ['copy'], function() {
     return gulp.src(['nate-baldwin-theme']).pipe(clean());
 })

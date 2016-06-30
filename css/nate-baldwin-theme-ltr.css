@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.1.7.12
+Version: 		2.1.8-14
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -257,14 +257,14 @@ h6, .h6 {
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-h1, .h1 {
+h1, .h1,
+h2, .h2 {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
   font-family: "signalistregular", "bitterregular", Georgia, serif;
   font-weight: normal; }
 
-h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
@@ -463,6 +463,40 @@ hr {
 body {
   min-height: 100vh; }
 
+.l-container, .l-container--fluid, .l-container--center {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.71429em 1.71429em calc(1.71429em * 3);
+  margin: 0 auto;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  overflow-x: hidden; }
+
+.l-container {
+  width: 100%; }
+  @media only screen and (min-width: 48rem) {
+    .l-container {
+      width: 83.33333%; } }
+  @media only screen and (min-width: 62rem) {
+    .l-container {
+      width: 83.33333%; } }
+  @media only screen and (min-width: 75rem) {
+    .l-container {
+      width: 66.66667%; } }
+  @media only screen and (min-width: 90rem) {
+    .l-container {
+      width: 66.66667%; } }
+
+.l-container--fluid {
+  width: 100%; }
+
+.l-container--center {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .l-section,
 .l-section--primary,
 .l-section--secondary,
@@ -513,9 +547,7 @@ body {
   background-color: #cd4349; }
 
 .l-section--primary .l-section__content,
-.l-section--primary .l-container,
-.l-section--primary .l-container--fluid,
-.l-section--primary .l-container--center {
+.l-section--primary .l-container {
   background-color: #cd4349; }
 
 .l-section--primary h1, .l-section--primary h2, .l-section--primary h3, .l-section--primary h4, .l-section--primary h5, .l-section--primary h6, .l-section--primary p {
@@ -525,53 +557,28 @@ body {
   background-color: #d4e0e4; }
 
 .l-section--secondary .l-section__content,
-.l-section--secondary .l-container,
-.l-section--secondary .l-container--fluid,
-.l-section--secondary .l-container--center {
+.l-section--secondary .l-container {
   background-color: #d4e0e4; }
 
 .l-section--light-gray::before {
   background-color: #BDBDBD; }
 
 .l-section--light-gray .l-section__content,
-.l-section--light-gray .l-container,
-.l-section--light-gray .l-container--fluid,
-.l-section--light-gray .l-container--center {
+.l-section--light-gray .l-container {
   background-color: #BDBDBD; }
 
 .l-section--white::before {
   background-color: #fff; }
 
 .l-section--white .l-section__content,
-.l-section--white .l-container,
-.l-section--white .l-container--fluid,
-.l-section--white .l-container--center {
+.l-section--white .l-container {
   background-color: #fff; }
-
-.l-container, .l-container--fluid, .l-container--center {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 1.71429em 1.71429em calc(1.71429em * 3);
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  overflow-x: hidden; }
-
-.l-container--fluid {
-  width: 100%; }
-
-.l-container--center {
-  width: 100%;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
 
 .l-section--hero {
   display: block;
   margin: 0;
   padding: calc(1.71429em * 2) 1.71429em calc(1.71429em * 4);
-  background-image: url("img/sky.jpg");
+  background-image: url("img/cutting-board.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: inherit; }
@@ -650,8 +657,9 @@ body {
       width: 240px; } }
 
 .footer__cta {
-  margin: .2em 0 .1em;
-  text-align: center; }
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; }
 
 .header__logo {
   display: block;

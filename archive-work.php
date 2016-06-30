@@ -27,8 +27,9 @@
 
 <div class="l-section--white">
 	<div class="l-section__content">
-		<div class="l-container--fluid l-container--center">
-			<h3>Selected Works</h3>
+		<div class="l-container--fluid row">
+			<div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8"
+				<h2>Selected Works</h2>
 				<ul class="portfolioList">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<a class="portfolioItemLink <?php
@@ -56,24 +57,30 @@
 					</a>
 				<?php endwhile; ?>
 				</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
-
+<!-- 
 <div class="l-section--light-gray">
 	<div class="l-section__content">
 		<div class="l-container--fluid l-container--center">
 			What I Do Here
 		</div>
 	</div>
-</div>
+</div> -->
 
 
 <div class="l-section--primary">
 	<div class="l-section__content">
-		<div class="l-container--fluid l-container--center">
-			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/social-links','parts/shared/footer','parts/shared/html-footer' ) ); ?>
+		<div class="l-container row">
+			<div class="footer__cta col-xs-12 col-sm-8">
+				<h5 class="h1"> Let's Chat! </h5>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/social-links','parts/shared/footer','parts/shared/html-footer' ) ); ?>
+			</div>
 		</div>
 	</div>
 </div>

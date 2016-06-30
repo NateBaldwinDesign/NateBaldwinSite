@@ -1,21 +1,36 @@
 $container-padding: $baseline;
+$single-column-width: divide(100%, 12);
 
-.l-container {
+%l-container-base {
 	display: flex;
 	padding: $container-padding $container-padding calc(#{$container-padding} * 3);
+	margin: 0 auto;
 	flex-wrap: wrap;
 	overflow-x: hidden;
 }
 
+.l-container {
+	@extend %l-container-base;
+
+	width: multiply($single-column-width, 12);
+
+	@include query-small {width: multiply($single-column-width, 10);}
+
+	@include query-medium {width: multiply($single-column-width, 10);}
+
+	@include query-large {width: multiply($single-column-width, 8);}
+
+	@include query-xlarge {width: multiply($single-column-width, 8);}
+}
+
 .l-container--fluid {
-	@extend .l-container;
+	@extend %l-container-base;
 
 	width: 100%;
 }
 
 .l-container--center {
-	@extend .l-container;
+	@extend %l-container-base;
 
-	width: 100%;
 	justify-content: center;
 }
