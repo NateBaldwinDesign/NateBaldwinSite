@@ -7,7 +7,7 @@
 	&::before {
 		content: " ";
 		position: absolute;
-		height: 10rem;
+		height: 12rem;
 		top: calc(#{$baseline} * -1.5125);
 		left: 0;
 		right: 0;
@@ -15,7 +15,7 @@
 		z-index: -1;
 
 		@include query-medium {top: calc(#{$baseline} * -1.8215);}
-		@include query-large {top: calc(#{$baseline} * -2);}
+		@include query-large {top: calc(#{$baseline} * -2.125);}
 	}
 
 	// &::after {

@@ -505,7 +505,7 @@ body {
   .l-section--white::before {
     content: " ";
     position: absolute;
-    height: 10rem;
+    height: 12rem;
     top: calc(1.71429em * -1.5125);
     left: 0;
     right: 0;
@@ -525,7 +525,7 @@ body {
       .l-section--secondary::before,
       .l-section--light-gray::before,
       .l-section--white::before {
-        top: calc(1.71429em * -2); } }
+        top: calc(1.71429em * -2.125); } }
 
 .l-section__content {
   display: block;
@@ -596,7 +596,7 @@ body {
 .l-section--hero {
   display: block;
   margin: 0;
-  padding: calc(1.71429em * 3) 1.71429em calc(1.71429em * 5);
+  padding: calc(1.71429em * 2) 1.71429em calc(1.71429em * 4);
   background-image: url("img/sky.jpg");
   background-position: center;
   background-size: cover;
@@ -605,11 +605,29 @@ body {
     text-align: center; }
   @media only screen and (min-width: 48rem) {
     .l-section--hero {
-      padding: calc(1.71429em * 6) calc(1.71429em * 2) calc(1.71429em * 8);
+      padding: calc(1.71429em * 5) calc(1.71429em * 2) calc(1.71429em * 7);
       background-attachment: fixed; } }
   @media only screen and (min-width: 62rem) {
     .l-section--hero {
-      padding: calc(1.71429em * 6) calc(1.71429em * 2) calc(1.71429em * 8); } }
+      padding: calc(1.71429em * 5) calc(1.71429em * 2) calc(1.71429em * 7); } }
+
+.hero-logo__wrapper {
+  display: block;
+  position: relative; }
+
+.hero-logo {
+  width: 100%;
+  height: auto;
+  fill: #000; }
+  @media only screen and (min-width: 48rem) {
+    .hero-logo {
+      height: 220px; } }
+  @media only screen and (min-width: 62rem) {
+    .hero-logo {
+      height: 240px; } }
+  @media only screen and (min-width: 75rem) {
+    .hero-logo {
+      height: 280px; } }
 
 /* Site CSS Components */
 .footer__contact {
@@ -768,4 +786,5 @@ footer {
 .u-flex-center {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  text-align: center; }

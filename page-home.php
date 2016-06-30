@@ -3,7 +3,12 @@
 <div class="l-section--hero">
 	<div class="l-container--fluid u-flex-center">
 		<hgroup>
-			<h1 class="heading">Nate Baldwin</h1>
+			<span class="hero-logo__wrapper">
+				<svg class="hero-logo">
+					<use xlink:href="#icon-NB_logo_type"></use>
+				</svg>
+			</span>
+			<!-- <h1 class="heading">Nate Baldwin</h1> -->
 			<h2 class="lead">User Experience Designer, Illustrator, Artist &amp; Front-end Developer</h2>
 		</hgroup>
 	</div>
