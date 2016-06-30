@@ -30,3 +30,20 @@
 	@include query-medium {height: 240px;}
 	@include query-large {height: 280px;}
 }
+
+.homepage__quote {
+	text-align: center;
+	max-width: 60ex;
+	font-weight: 200;
+	margin: 3rem 0;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	p,
+	blockquote {font-weight: 300;}
+
+	@include query-small {margin: 7rem 0;}
+}

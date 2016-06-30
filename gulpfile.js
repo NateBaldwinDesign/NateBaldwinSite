@@ -185,11 +185,11 @@ gulp.task('copy-parts', function() {
   return gulp.src('parts/**/*.*')
     .pipe(gulp.dest('nate-baldwin-theme/parts'));
 });
-gulp.task('copy-icons', function() {
+gulp.task('copy-icons', ['svg-sprite'], function() {
   return gulp.src('icons/**/*.*')
     .pipe(gulp.dest('nate-baldwin-theme/icons'));
 });
-gulp.task('copy-css', function() {
+gulp.task('copy-css', ['scss'], function() {
   return gulp.src('css/nate-baldwin-theme-ltr.css')
     .pipe(rename('style.css'))
     .pipe(gulp.dest('nate-baldwin-theme'));
@@ -198,7 +198,6 @@ gulp.task('copy-screenshot', function() {
   return gulp.src('screenshot.png')
     .pipe(gulp.dest('nate-baldwin-theme'));
 });
-gulp.task('copy', ['copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css', 'copy-icons', 'copy-screenshot']);
 
 // Clean Temp
 gulp.task('clean-temp', ['archive'], function() {
@@ -208,24 +207,13 @@ gulp.task('clean-temp', ['archive'], function() {
 //==========================================
 // Environments
 //==========================================
-gulp.task('default', [
-  'scss',
-  'svg-sprite'
-], function() {
-  gulp.watch(['scss/**/*.scss'], watchOptions, ['scss']);
-});
 
-gulp.task('build', [
-  'scss',
-  'clean-archive',
-  'svg-sprite',
-  'copy'
-], function() {
+gulp.task('copy', ['clean-archive', 'copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css', 'copy-icons', 'copy-screenshot'], function() {
   return gulp.src('nate-baldwin-theme/**/*.*')
     .pipe(zip('nate-baldwin-theme-' + nb_package.version + '.zip')) 
     .pipe(gulp.dest('builds'));
 });
 
-gulp.task('default', ['build'], function() {
+gulp.task('default', ['copy'], function() {
     return gulp.src(['nate-baldwin-theme']).pipe(clean());
 })
