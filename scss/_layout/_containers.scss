@@ -3,7 +3,7 @@ $single-column-width: divide(100%, 12);
 
 %l-container-base {
 	display: flex;
-	padding: $container-padding $container-padding calc(#{$container-padding} * 3);
+	padding: $container-padding $container-padding calc(#{$container-padding} * 2.125);
 	margin: 0 auto;
 	flex-wrap: wrap;
 	overflow-x: hidden;

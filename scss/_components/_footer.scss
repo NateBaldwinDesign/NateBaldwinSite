@@ -29,4 +29,7 @@
 
 .footer__cta {
 	align-self: center;
+	margin-bottom: 1.5rem;
+
+	@include query-small {margin-bottom: 0;}
 }

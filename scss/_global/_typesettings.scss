@@ -271,6 +271,7 @@ body {
   h1, .h1 {
     margin-bottom: emRhythm(1, $ms-up3); // [1]
     @include setType(6, $ms-up3); // [2]  default ms-up2
+    font-size: 5em;
     line-height: .665; // override typeset's line height for Signalist
 
     @include query-small {
@@ -289,34 +290,37 @@ body {
   // Custom Type for Homepage Healine
   h1.headline, .h1.headline {
     margin-bottom: emRhythm(1, $ms-up2); // [1]
-    @include setType(6, $ms-up5); // [2]  default ms-up2
+    @include setType(8, $ms-up5); // [2]  default ms-up2
     line-height: .665; // override typeset's line height for Signalist
 
     @include query-small {
       margin-bottom: emRhythm(1, $ms-up2); // [4]
-      @include setType(8, $ms-up6); // [5] default ms-up3
+      @include setType(10, $ms-up6); // [5] default ms-up3
       line-height: .665; // override typeset's line height for Signalist
     }
 
     @include query-medium {
       margin-bottom: emRhythm(1, $ms-up2);
-      @include setType(10, $ms-up7); // default ms-up4
+      @include setType(14, $ms-up7); // default ms-up4
       line-height: .665; // override typeset's line height for Signalist
     }
   }
 
   h2, .h2 {
     margin-bottom: emRhythm(1, $ms-up1);
-    @include setType(5, $ms-up1);
+    @include setType(5, $ms-up2);
+    font-size: 3.5em;
 
     @include query-small {
       margin-bottom: emRhythm(1, $ms-up2);
       @include setType(6, $ms-up2)
+      font-size: 5em;
     }
 
     @include query-medium {
       margin-bottom: emRhythm(1, $ms-up3);
       @include setType(8, $ms-up3);
+      font-size: 7.375em;
     }
   }
 

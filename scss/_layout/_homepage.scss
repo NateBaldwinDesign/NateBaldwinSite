@@ -1,7 +1,7 @@
 .l-section--hero {
 	display: block;
 	margin: 0;
-	padding: calc(#{$baseline} * 2) $baseline calc(#{$baseline} * 4);
+	padding: calc(#{$baseline} * 2) $baseline calc(#{$baseline} * 3);
     background-image: url("img/cutting-board.jpg");
     background-position: center;
     background-size: cover;
@@ -19,6 +19,7 @@
 .hero-logo__wrapper {
 	display: block;
 	position: relative;
+	margin-bottom: divide($baseline, 2);
 }
 
 .hero-logo {
