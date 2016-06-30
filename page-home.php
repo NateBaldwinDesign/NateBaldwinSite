@@ -4,7 +4,8 @@
 	<div class="l-container--fluid u-flex-center">
 		<hgroup>
 			<span class="hero-logo__wrapper">
-				<svg class="hero-logo">
+				<svg class="hero-logo" ariaLabelledby="title">
+					<title>Nate Baldwin</title>
 					<use xlink:href="#icon-NB_logo_type"></use>
 				</svg>
 			</span>
