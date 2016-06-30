@@ -605,11 +605,11 @@ body {
     text-align: center; }
   @media only screen and (min-width: 48rem) {
     .l-section--hero {
-      padding: calc(1.71429em * 5) calc(1.71429em * 2) calc(1.71429em * 7);
+      padding: calc(1.71429em * 4) calc(1.71429em * 2) calc(1.71429em * 5);
       background-attachment: fixed; } }
   @media only screen and (min-width: 62rem) {
     .l-section--hero {
-      padding: calc(1.71429em * 5) calc(1.71429em * 2) calc(1.71429em * 7); } }
+      padding: calc(1.71429em * 4) calc(1.71429em * 2) calc(1.71429em * 5); } }
 
 .hero-logo__wrapper {
   display: block;

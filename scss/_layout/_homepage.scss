@@ -10,10 +10,10 @@
     hgroup {text-align: center;}
 
 	@include query-small { 
-		padding: calc(#{$baseline} * 5) calc(#{$baseline} * 2) calc(#{$baseline} * 7);
+		padding: calc(#{$baseline} * 4) calc(#{$baseline} * 2) calc(#{$baseline} * 5);
 		background-attachment: fixed;
 	}
-	@include query-medium { padding: calc(#{$baseline} * 5) calc(#{$baseline} * 2) calc(#{$baseline} * 7);}
+	@include query-medium { padding: calc(#{$baseline} * 4) calc(#{$baseline} * 2) calc(#{$baseline} * 5);}
 }
 
 .hero-logo__wrapper {
