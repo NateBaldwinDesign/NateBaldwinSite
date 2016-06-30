@@ -3,13 +3,14 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.0.0
+Version: 		2.0.7-snapshot1
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
 /* Resets */
 @import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic);
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700);
 * {
   box-sizing: border-box; }
 
@@ -205,34 +206,6 @@ Font-Face ----------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 /* Bitter  */
 @font-face {
-  font-family: 'bitterbold';
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/bitter-font/bitter-bold-webfont.eot");
-  src: url("fonts/bitter-font/bitter-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/bitter-font/bitter-bold-webfont.woff2") format("woff2"), url("fonts/bitter-font/bitter-bold-webfont.woff") format("woff"), url("fonts/bitter-font/bitter-bold-webfont.ttf") format("truetype"), url("fonts/bitter-font/bitter-bold-webfont.svg#bitterbold") format("svg"); }
-
-@font-face {
-  font-family: 'bitterbold_italic';
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/bitter-font/bitter-bolditalic-webfont.eot");
-  src: url("fonts/bitter-font/bitter-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/bitter-font/bitter-bolditalic-webfont.woff2") format("woff2"), url("fonts/bitter-font/bitter-bolditalic-webfont.woff") format("woff"), url("fonts/bitter-font/bitter-bolditalic-webfont.ttf") format("truetype"), url("fonts/bitter-font/bitter-bolditalic-webfont.svg#bitterbold_italic") format("svg"); }
-
-@font-face {
-  font-family: 'bitteritalic';
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/bitter-font/bitter-italic-webfont.eot");
-  src: url("fonts/bitter-font/bitter-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/bitter-font/bitter-italic-webfont.woff2") format("woff2"), url("fonts/bitter-font/bitter-italic-webfont.woff") format("woff"), url("fonts/bitter-font/bitter-italic-webfont.ttf") format("truetype"), url("fonts/bitter-font/bitter-italic-webfont.svg#bitteritalic") format("svg"); }
-
-@font-face {
-  font-family: 'bitterregular';
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/bitter-font/bitter-regular-webfont.eot");
-  src: url("fonts/bitter-font/bitter-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/bitter-font/bitter-regular-webfont.woff2") format("woff2"), url("fonts/bitter-font/bitter-regular-webfont.woff") format("woff"), url("fonts/bitter-font/bitter-regular-webfont.ttf") format("truetype"), url("fonts/bitter-font/bitter-regular-webfont.svg#bitterregular") format("svg"); }
-
-@font-face {
   font-family: 'signalistregular';
   font-style: normal;
   font-weight: normal;
@@ -271,7 +244,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #000; }
 
@@ -299,7 +272,7 @@ h6, .h6 {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   font-weight: 400; }
 
 h1, .h1 {
@@ -670,7 +643,7 @@ body {
     width: inherit; }
 
 .lead {
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   font-weight: 200;
   max-width: 34ex; }
 
@@ -679,7 +652,7 @@ body {
   font-style: italic; }
 
 footer {
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   display: none;

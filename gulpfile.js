@@ -20,7 +20,10 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     nb_package = require('./package.json'),
     insert = require('gulp-insert'),
-    watchOptions = {interval: 1000}
+    replace = require('gulp-replace'),
+    packageJson = require('./package.json'),
+    version = packageJson.version,
+    watchOptions = {interval: 1000};
 
 //==========================================
 // SASS preprocessing
@@ -59,6 +62,7 @@ gulp.task('scss', ['css-clean'], function() {
     .pipe(sourcemaps.write({
       addComment: false
     }))
+    .pipe(replace('{{versionNumber}}', version))
     .pipe(gulp.dest('css'))
 });
 //minifiy css
@@ -212,8 +216,8 @@ gulp.task('default', [
 });
 
 gulp.task('build', [
-  'clean-archive',
   'scss',
+  'clean-archive',
   'svg-sprite',
   'copy'
 ], function() {
