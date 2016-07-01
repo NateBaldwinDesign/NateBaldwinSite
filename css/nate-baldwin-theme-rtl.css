@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.1.8-86
+Version: 		2.1.8-100
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -633,6 +633,56 @@ body {
       margin: 7rem 0; } }
 
 /* Site CSS Components */
+header {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  padding: 0.85715em;
+  margin: 0;
+  z-index: 1; }
+  header .menu {
+    display: inline-block;
+    width: 100%; }
+    header .menu ul {
+      list-style: none;
+      width: 100%;
+      text-align: center;
+      margin: 0; }
+      header .menu ul .page_item {
+        margin-left: 2rem;
+        display: inline-block;
+        font-size: 1.125rem; }
+        header .menu ul .page_item a {
+          text-decoration: none;
+          padding: 0.85715em, 1rem;
+          color: #cd4349; }
+  @media only screen and (min-width: 48rem) {
+    header {
+      padding: 1.71429em; } }
+
+.header__logo, .header__logo--reversed {
+  display: block;
+  z-index: 1; }
+  .header__logo svg, .header__logo--reversed svg {
+    height: 3.42858em;
+    width: 1.71429em;
+    fill: rgba(0, 0, 0, 0.4);
+    transition: all 0.1s ease-in-out; }
+    .header__logo svg:hover, .header__logo--reversed svg:hover, .header__logo svg:focus, .header__logo--reversed svg:focus, .header__logo svg:active, .header__logo--reversed svg:active, .header__logo svg:active:hover, .header__logo--reversed svg:active:hover, .header__logo svg:active:focus, .header__logo--reversed svg:active:focus {
+      fill: rgba(0, 0, 0, 0.8);
+      transition: all 0.1s ease-in-out; }
+  @media only screen and (min-width: 48rem) {
+    .header__logo, .header__logo--reversed {
+      display: inline-block; }
+      .header__logo svg, .header__logo--reversed svg {
+        height: 5.14287em;
+        width: 2.57144em; } }
+
+.header__logo--reversed svg {
+  fill: rgba(255, 255, 255, 0.5); }
+  .header__logo--reversed svg:hover, .header__logo--reversed svg:focus, .header__logo--reversed svg:active, .header__logo--reversed svg:active:hover, .header__logo--reversed svg:active:focus {
+    fill: white; }
+
 .footer__contact {
   position: absolute;
   top: -110px;
@@ -669,13 +719,6 @@ body {
   @media only screen and (min-width: 48rem) {
     .footer__cta {
       margin-bottom: 0; } }
-
-.header__logo {
-  display: block;
-  position: relative;
-  width: 30%; }
-  .header__logo svg {
-    width: inherit; }
 
 .lead {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;

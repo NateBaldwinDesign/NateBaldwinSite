@@ -27,8 +27,10 @@
 
 	add_theme_support('post-thumbnails');
 	
-	register_nav_menus(array('MainMenu' => 'MainMenu'));
-
+	function register_my_menu() {
+	  register_nav_menu('MainMenu',__( 'MainMenu' ));
+	}
+	add_action( 'init', 'register_my_menu' );
 	/* ========================================================================================================================
 	
 	Actions and Filters
