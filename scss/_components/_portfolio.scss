@@ -1,0 +1,119 @@
+.portfolio {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.portfolio__link {
+	display: block;
+}
+
+.portfolio__item {
+	display: block;
+	margin: 0;
+	text-decoration: none;
+	color: $text-color;
+
+	@include query-xsmall {margin: 0 4rem;}
+	@include query-small {margin: 0;}
+}
+
+.portfolio__thumb {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	opacity: .5;
+	transition: $transition-medium;
+
+	&::before,
+	&::after {
+		background-color: #fff;
+		// opacity: .5;
+	}
+
+	// &::before {
+	// 	content: " ";
+	// 	position: absolute;
+	// 	height: 4rem;
+	// 	top: -4.5rem;
+	// 	left: 0;
+	// 	right: 0;
+	// 	transform: skewY(-4deg);
+	// 	z-index: 0;
+
+	// 	@include query-medium {top: -4.5rem;}
+	// 	@include query-large {top: -4.5rem;}
+	// }
+
+	&::after {
+		content: " ";
+		position: absolute;
+		height: 4rem;
+		bottom: -4.5rem;
+		left: 0;
+		right: 0;
+		transform: skewY(-4deg);
+		z-index: 0;
+
+		@include query-medium {bottom: -4.5rem;}
+		@include query-large {bottom: -4.5rem;}
+	}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		transition: $transition-medium;
+		opacity: 1;
+	}
+
+	@include query-xsmall {height: 350px}
+	@include query-small {height: 350px}
+	@include query-medium {height: 380px}
+	@include query-large {height: 380px}
+	@include query-xlarge {height: 380px}
+
+}
+
+.portfolio__title {
+	margin: .5rem 0 0;
+	font-weight: 600;
+	text-align: left;
+}
+
+.portfolio__tag-list {
+	list-style: none;
+	margin-top: -.25rem;
+    text-align: left;
+}
+
+.portfolio__tag {
+	display: inline-block;
+	text-align: left;
+	font-size: .875rem;
+	margin: 0 .5rem 0 0;
+	padding-right: .5rem;
+
+	&:not(:last-child) {border-right: 1px solid #dadada;}
+}
+
+
+.portfolio__tag-list--large {
+	@extend .portfolio__tag-list;
+
+	margin-top: 0;
+	margin-left: 0;
+
+	.portfolio__tag {
+		font-size: 1rem;
+		color: #888;
+		margin-right: .875rem;
+		padding-right: .875rem;
+	}
+}

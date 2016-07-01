@@ -61,6 +61,23 @@
   }
 }
 
+// Math Functions
+@function add($some-number, $another-number){
+  @return $some-number + $another-number
+}
+
+@function divide($some-number, $another-number){
+  @return $some-number / $another-number
+}
+
+@function multiply($some-number, $another-number){
+  @return $some-number * $another-number
+}
+
+@function subtract($some-number, $another-number){
+  @return $some-number - $another-number
+}
+
 /* Sass Mixin that generates a Baseline Grid */
 /* by: Mike Morrison, Soholaunch.com */
 /* You don't have to leave this credit comment in, but it would be nice of you. */

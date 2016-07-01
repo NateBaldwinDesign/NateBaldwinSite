@@ -1,7 +1,50 @@
 .l-section--hero {
 	display: block;
-	margin: calc(#{$baseline} * 3) $baseline;
+	margin: 0;
+	padding: calc(#{$baseline} * 2) $baseline calc(#{$baseline} * 3);
+    background-image: url("img/cutting-board.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: inherit;
 
-	@include query-small { margin: calc(#{$baseline} * 6) calc(#{$baseline} * 2);}
-	@include query-medium { margin: calc(#{$baseline} * 5) calc(#{$baseline} * 2);}
+    hgroup {text-align: center;}
+
+	@include query-small { 
+		padding: calc(#{$baseline} * 4) calc(#{$baseline} * 2) calc(#{$baseline} * 5);
+		background-attachment: fixed;
+	}
+	@include query-medium { padding: calc(#{$baseline} * 4) calc(#{$baseline} * 2) calc(#{$baseline} * 5);}
+}
+
+.hero-logo__wrapper {
+	display: block;
+	position: relative;
+	margin-bottom: divide($baseline, 2);
+}
+
+.hero-logo {
+	width: 100%;
+	height: auto;
+	fill: #000;
+
+	@include query-small {height: 220px;}
+	@include query-medium {height: 240px;}
+	@include query-large {height: 280px;}
+}
+
+.homepage__quote {
+	text-align: center;
+	max-width: 60ex;
+	font-weight: 200;
+	margin: 3rem 0;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	p,
+	blockquote {font-weight: 300;}
+
+	@include query-small {margin: 7rem 0;}
 }

@@ -1,0 +1,59 @@
+// .gallery {
+// 	list-style: none;
+// 	display: flex;
+// 	position: relative;
+// 	height: 525px;
+// 	overflow-x: auto;
+// 	overflow-y: hidden;
+// 	margin: 0;
+// 	padding: 0;
+// 	white-space: nowrap;
+// 	flex-wrap: none;
+// }
+.gallery {
+	position: relative;
+	height: multiply($baseline, 8);
+	margin-bottom: multiply($baseline, 2);
+
+	@include query-xsmall {height: multiply($baseline, 12);}
+	@include query-small {height: multiply($baseline, 14);}
+	@include query-medium {height: multiply($baseline, 18);}
+	@include query-large {height: multiply($baseline, 20);}
+	@include query-xlarge {height: multiply($baseline, 24);}
+}
+
+.gallery__item,
+.gallery .item {
+	display: block;
+	width: 100%;
+	margin: 0;
+	height: multiply($baseline, 8);
+	overflow: hidden;
+
+	@include query-xsmall {height: multiply($baseline, 12);}
+	@include query-small {height: multiply($baseline, 14);}
+	@include query-medium {height: multiply($baseline, 18);}
+	@include query-large {height: multiply($baseline, 20);}
+	@include query-xlarge {height: multiply($baseline, 24);}
+}
+
+.gallery__image {
+	width: 100%;
+	display: block;
+}
+
+.controls {
+    position: absolute;
+    bottom: multiply($baseline, -2);
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.control-button {
+	text-decoration: none;
+	font-size: 2em;
+	font-family: monospace;
+
+	@include query-small {font-size: 3em;}
+}

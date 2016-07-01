@@ -224,8 +224,8 @@ body {
   body {
     margin: 0;
     padding: 0;
-    font-family: $font-serif;
-    font-weight: 400;
+    font-family: $font-sans;
+    font-weight: 300;
     color: $text-color;
   }
   
@@ -239,14 +239,14 @@ body {
     text-rendering: optimizeLegibility; 
   }
 
-  h1, .h1 {
+  h1, .h1,
+  h2, .h2 {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
-    font-family: $font-sans;
+    font-family: $font-serif;
     font-weight: normal;
   }
-  h2, .h2,
   h3, .h3,
   h4, .h4,
   h5, .h5,
@@ -254,8 +254,8 @@ body {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
-    font-family: $font-serif;
-    font-weight: bold;
+    font-family: $font-sans;
+    font-weight: 400;
   }
 
   // [1] Applies a margin bottom that is a multiple of the vertical grid in EMs.
@@ -271,6 +271,7 @@ body {
   h1, .h1 {
     margin-bottom: emRhythm(1, $ms-up3); // [1]
     @include setType(6, $ms-up3); // [2]  default ms-up2
+    font-size: 5em;
     line-height: .665; // override typeset's line height for Signalist
 
     @include query-small {
@@ -289,34 +290,37 @@ body {
   // Custom Type for Homepage Healine
   h1.headline, .h1.headline {
     margin-bottom: emRhythm(1, $ms-up2); // [1]
-    @include setType(6, $ms-up5); // [2]  default ms-up2
+    @include setType(8, $ms-up5); // [2]  default ms-up2
     line-height: .665; // override typeset's line height for Signalist
 
     @include query-small {
       margin-bottom: emRhythm(1, $ms-up2); // [4]
-      @include setType(8, $ms-up6); // [5] default ms-up3
+      @include setType(10, $ms-up6); // [5] default ms-up3
       line-height: .665; // override typeset's line height for Signalist
     }
 
     @include query-medium {
       margin-bottom: emRhythm(1, $ms-up2);
-      @include setType(10, $ms-up7); // default ms-up4
+      @include setType(14, $ms-up7); // default ms-up4
       line-height: .665; // override typeset's line height for Signalist
     }
   }
 
   h2, .h2 {
     margin-bottom: emRhythm(1, $ms-up1);
-    @include setType(5, $ms-up1);
+    @include setType(5, $ms-up2);
+    font-size: 3.5em;
 
     @include query-small {
       margin-bottom: emRhythm(1, $ms-up2);
       @include setType(6, $ms-up2)
+      font-size: 5em;
     }
 
     @include query-medium {
       margin-bottom: emRhythm(1, $ms-up3);
       @include setType(8, $ms-up3);
+      font-size: 7.375em;
     }
   }
 
@@ -373,6 +377,7 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     max-width: emRhythm(96);
+    font-size: 1.125em;
 
     @include query-small {
       @if $paragraph-justify {
@@ -402,17 +407,19 @@ body {
   }
 
   blockquote {
-    margin-top: emRhythm(4);
-    margin-bottom: emRhythm(4);
+    margin-top: emRhythm(1);
+    margin-bottom: emRhythm(1);
     margin-left: 0;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: emRhythm(4);
-    border-left: $base-vertical-unit solid lighten(#000, 50%);
+    border-left: $base-vertical-unit solid $color-primary;
     font-family: $font-serif;
+    @include setType(5, $ms-up2);
+    font-size: 3.5em;
 
     p {
-      margin-bottom: emRhythm(2);
+      margin-bottom: emRhythm(1);
     }
 
     footer {

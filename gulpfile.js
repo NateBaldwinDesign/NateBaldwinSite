@@ -20,13 +20,23 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     nb_package = require('./package.json'),
     insert = require('gulp-insert'),
-    watchOptions = {interval: 1000}
+    replace = require('gulp-replace'),
+    packageJson = require('./package.json'),
+    version = packageJson.version,
+    bump = require('gulp-bump'),
+    watchOptions = {interval: 1000};
+
+gulp.task('bump', function(){
+  gulp.src('./package.json')
+  .pipe(bump({type:'prerelease'}))
+  .pipe(gulp.dest('./'));
+});
 
 //==========================================
 // SASS preprocessing
 //==========================================
 // Clean existing CSS before compiling
-gulp.task('css-clean', function() {
+gulp.task('css-clean', ['bump'], function() {
   return gulp.src('css/**/*.css*').pipe(clean());
 });
 // Sorts properties form SCSS files
@@ -59,6 +69,7 @@ gulp.task('scss', ['css-clean'], function() {
     .pipe(sourcemaps.write({
       addComment: false
     }))
+    .pipe(replace('{{versionNumber}}', version))
     .pipe(gulp.dest('css'))
 });
 //minifiy css
@@ -77,7 +88,7 @@ gulp.task('clean-sprite', function() {
   return gulp.src('icons/custom-portfolio-sprite.svg').pipe(clean());
 })
 gulp.task('svg-imagemin', ['clean-sprite'], function() {
-  return gulp.src(['icons/svg/**/*.svg', 'icons/social/**/*.svg'])
+  return gulp.src(['icons/svg/**/*.svg', 'icons/social/**/*.svg', 'img/**.svg'])
     .pipe(svgmin({
       plugins: [{
         removeXMLProcInst: false
@@ -181,11 +192,11 @@ gulp.task('copy-parts', function() {
   return gulp.src('parts/**/*.*')
     .pipe(gulp.dest('nate-baldwin-theme/parts'));
 });
-gulp.task('copy-icons', function() {
+gulp.task('copy-icons', ['svg-sprite'], function() {
   return gulp.src('icons/**/*.*')
     .pipe(gulp.dest('nate-baldwin-theme/icons'));
 });
-gulp.task('copy-css', function() {
+gulp.task('copy-css', ['scss'], function() {
   return gulp.src('css/nate-baldwin-theme-ltr.css')
     .pipe(rename('style.css'))
     .pipe(gulp.dest('nate-baldwin-theme'));
@@ -194,7 +205,6 @@ gulp.task('copy-screenshot', function() {
   return gulp.src('screenshot.png')
     .pipe(gulp.dest('nate-baldwin-theme'));
 });
-gulp.task('copy', ['copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css', 'copy-screenshot']);
 
 // Clean Temp
 gulp.task('clean-temp', ['archive'], function() {
@@ -204,21 +214,13 @@ gulp.task('clean-temp', ['archive'], function() {
 //==========================================
 // Environments
 //==========================================
-gulp.task('default', [
-  'scss',
-  'svg-sprite'
-], function() {
-  gulp.watch(['scss/**/*.scss'], watchOptions, ['scss']);
-});
 
-gulp.task('build', [
-  'clean-archive',
-  'scss',
-  'svg-sprite',
-  'copy'
-], function() {
+gulp.task('copy', ['clean-archive', 'copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css', 'copy-icons', 'copy-screenshot'], function() {
   return gulp.src('nate-baldwin-theme/**/*.*')
     .pipe(zip('nate-baldwin-theme-' + nb_package.version + '.zip')) 
     .pipe(gulp.dest('builds'));
-  return gulp.src(['nate-baldwin-theme']).pipe(clean());
 });
+
+gulp.task('default', ['copy'], function() {
+    return gulp.src(['nate-baldwin-theme']).pipe(clean());
+})

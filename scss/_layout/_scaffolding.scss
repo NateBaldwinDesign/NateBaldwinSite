@@ -1,0 +1,46 @@
+$single-column-width: divide(100%, 12);
+
+.l__row {
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+
+.l__col-1,
+.l__col-2,
+.l__col-3,
+.l__col-4,
+.l__col-5,
+.l__col-6,
+.l__col-7,
+.l__col-8,
+.l__col-9,
+.l__col-10,
+.l__col-11,
+.l__col-12 {
+	display: flex;
+}
+
+.l__col-1 {width: $single-column-width;}
+
+.l__col-2 {width: multiply($single-column-width, 2);}
+
+.l__col-3 {width: multiply($single-column-width, 3);}
+
+.l__col-4 {width: multiply($single-column-width, 4);}
+
+.l__col-5 {width: multiply($single-column-width, 5);}
+
+.l__col-6 {width: multiply($single-column-width, 6);}
+
+.l__col-7 {width: multiply($single-column-width, 7);}
+
+.l__col-8 {width: multiply($single-column-width, 8);}
+
+.l__col-9 {width: multiply($single-column-width, 9);}
+
+.l__col-10 {width: multiply($single-column-width, 10);}
+
+.l__col-11 {width: multiply($single-column-width, 11);}
+
+.l__col-12 {width: multiply($single-column-width, 12);}

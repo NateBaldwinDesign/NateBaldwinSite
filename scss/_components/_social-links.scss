@@ -11,12 +11,12 @@
 		margin: 0;
 	}
 
-	@include query-small {width: 25%;}
+	@include query-small {width: 40%;}
 }
 
 .social__item {
 	display: flex;
-	transition: $transition-slow;
+	transition: $transition-medium;
 	color: #fff;
 	text-decoration: none;
 	opacity: .8;
@@ -28,11 +28,11 @@
 	&:active,
 	&:active:hover,
 	&:active:focus {
-		transition: $transition-slow;
+		transition: $transition-medium;
 		opacity: 1;
 
 		.social__icon {
-			transition: $transition-slow;
+			transition: $transition-medium;
 			background-color: darken($color-primary, 10%);
 		}
 	}

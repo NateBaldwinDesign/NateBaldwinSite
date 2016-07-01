@@ -2,36 +2,56 @@
 %l-section {
 	position: relative;
 	width: 100%;
+	z-index: 0;
 
 	&::before {
 		content: " ";
 		position: absolute;
-		height: 10rem;
-		top: calc(#{$baseline} * -1.25);
+		height: 12rem;
+		top: calc(#{$baseline} * -1.5125);
 		left: 0;
 		right: 0;
-		transform: skewY(-3deg);
+		transform: skewY(-4deg);
 		z-index: -1;
 
-		@include query-medium {top: calc(#{$baseline} * -1.75);}
-		@include query-large {top: calc(#{$baseline} * -2);}
+		@include query-medium {top: calc(#{$baseline} * -1.8215);}
+		@include query-large {top: calc(#{$baseline} * -2.125);}
 	}
+
+	// &::after {
+	// 	content: " ";
+	// 	position: absolute;
+	// 	height: 12rem;
+	// 	bottom: calc(#{$baseline} * -1.5125);
+	// 	left: 0;
+	// 	right: 0;
+	// 	transform: skewY(-4deg);
+	// 	z-index: -1;
+
+	// 	@include query-medium {bottom: calc(#{$baseline} * -1.8215);}
+	// 	@include query-large {bottom: calc(#{$baseline} * -2);}
+	// }
 }
 
 .l-section__content {
 	display: block;
 	width: 100%;
 	margin: -2px 0 0;
+	padding-bottom: 3rem;
+}
+
+.l-section--pageheader {
+	padding-top: calc(#{$baseline} * 2);
 }
 
 .l-section--primary {
 	@extend %l-section;
 
-	&::before {background-color: $color-primary;}
+	&::before,
+	&::after {background-color: $color-primary;}
 
-	.l-section__content {background-color: $color-primary;}
-
-	.section__angle {fill: $color-primary;}
+	.l-section__content,
+	.l-container {background-color: $color-primary;}
 
 	h1, h2, h3, h4, h5, h6, p {color: #fff;}
 }
@@ -39,15 +59,29 @@
 .l-section--secondary {
 	@extend %l-section;
 
-	.l-section__content {background-color: $color-secondary;}
+	&::before,
+	&::after {background-color: $color-secondary;}
 
-	.section__angle {fill: $color-secondary;}
+	.l-section__content,
+	.l-container {background-color: $color-secondary;}
 }
 
 .l-section--light-gray {
 	@extend %l-section;
 
-	.l-section__content {background-color: $color-light-gray;}
+	&::before,
+	&::after {background-color: $color-light-gray;}
 
-	.section__angle {fill: $color-light-gray;}
+	.l-section__content,
+	.l-container {background-color: $color-light-gray;}
+}
+
+.l-section--white {
+	@extend %l-section;
+
+	&::before,
+	&::after {background-color: #fff;}
+
+	.l-section__content,
+	.l-container {background-color: #fff;}
 }

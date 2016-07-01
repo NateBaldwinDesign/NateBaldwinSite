@@ -60,7 +60,7 @@
 			Github
 		</span>
 	</a>
-	<a class="social__item" target="_blank" href="http://vimeo.com/natebaldwinart">
+<!-- 	<a class="social__item" target="_blank" href="http://vimeo.com/natebaldwinart">
 		<span class="social__icon">
 			<svg>
 				<use xlink:href="#icon-social-vimeo"></use>
@@ -69,5 +69,5 @@
 		<span class="social__label">
 			Vimeo
 		</span>
-	</a>
+	</a> -->
 </section>
