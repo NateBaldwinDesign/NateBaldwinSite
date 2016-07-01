@@ -50,9 +50,9 @@
 							</div>
 							<p class="portfolio__title"><?php echo get_the_title(); ?></p>
 							<ul class="portfolio__tag-list">
-								<li class="portfolio__tag"> Tag </li>
-								<li class="portfolio__tag"> Tag </li>
-								<li class="portfolio__tag"> Tag </li>
+								<li class="portfolio__tag"> 
+									<?php echo types_render_field( "project-responsibilities", array("separator" 	=> "</li><li class='portfolio__tag'>") ) ?>							
+								</li>
 							</ul>
 						</a>
 					</li>
