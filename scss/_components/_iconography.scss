@@ -1,0 +1,38 @@
+.icon__container {
+	position: relative;
+	display: block;
+	padding: divide($baseline, 4);
+	margin: 0;
+	border: 0;
+}
+
+.icon__container--circle {
+	@extend .icon__container;
+
+	border-radius: 50%;
+	background-color: $color-primary;
+	transition: $transition-medium;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		background-color: darken($color-primary, 10%);
+		transition: $transition-medium;
+	}
+}
+
+.icon {
+	position: relative;
+	display: block;
+	vertical-align: middle;
+	width: multiply($baseline, 1);
+	height: multiply($baseline, 1);
+	fill: #fff;
+
+	@include query-medium {
+		width: multiply($baseline, 1.5);
+		height: multiply($baseline, 1.5);
+	}
+}

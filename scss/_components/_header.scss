@@ -76,3 +76,8 @@ header {
 		&:active:focus {fill: rgba(255, 255, 255, 1);}
 	}
 }
+
+.header__back-button {
+	position: fixed;
+	z-index: 100;
+}

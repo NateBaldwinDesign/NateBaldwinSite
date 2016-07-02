@@ -1,6 +1,6 @@
 .lead {
     font-family: $font-sans;
-    font-weight: 200;
+    font-weight: 300;
     max-width: 34ex;
 }
 
@@ -18,4 +18,21 @@ footer {
     font-size: .75em;
     text-align: center;
     opacity: .5;
+}
+
+a {
+    color: darken($color-primary, 10%);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 3px solid lighten($color-primary, 35%);
+    transition: $transition-medium;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:hover,
+    &:active:focus {
+        transition: $transition-medium;
+        border-color: $color-primary;
+    }
 }

@@ -27,9 +27,10 @@ Author URI: 	http://www.natebaldw.in
 @import '_layout/_homepage';
 
 /* Site CSS Components */
+@import '_components/_typography';
+@import '_components/_iconography';
 @import '_components/_header';
 @import '_components/_footer';
-@import '_components/_typography';
 @import '_components/_social-links';
 @import '_components/_images';
 @import '_components/_portfolio';
