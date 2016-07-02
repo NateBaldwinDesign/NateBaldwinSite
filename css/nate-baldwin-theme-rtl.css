@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.2.1-15
+Version: 		2.2.2
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -877,7 +877,8 @@ header {
   padding: 0; }
 
 .portfolio__link {
-  display: block; }
+  display: block;
+  margin-bottom: 5.14287em; }
 
 .portfolio__item {
   display: block;
@@ -1353,19 +1354,19 @@ header {
   margin-bottom: 3.42858em; }
   @media only screen and (min-width: 32rem) {
     .gallery {
-      height: 20.57148em; } }
+      height: 24.00006em; } }
   @media only screen and (min-width: 48rem) {
     .gallery {
-      height: 24.00006em; } }
+      height: 30.85722em; } }
   @media only screen and (min-width: 62rem) {
     .gallery {
-      height: 30.85722em; } }
+      height: 34.2858em; } }
   @media only screen and (min-width: 75rem) {
     .gallery {
-      height: 34.2858em; } }
+      height: 41.14296em; } }
   @media only screen and (min-width: 90rem) {
     .gallery {
-      height: 41.14296em; } }
+      height: 44.57154em; } }
 
 .gallery__item,
 .gallery .item {
@@ -1377,23 +1378,23 @@ header {
   @media only screen and (min-width: 32rem) {
     .gallery__item,
     .gallery .item {
-      height: 20.57148em; } }
+      height: 24.00006em; } }
   @media only screen and (min-width: 48rem) {
     .gallery__item,
     .gallery .item {
-      height: 24.00006em; } }
+      height: 30.85722em; } }
   @media only screen and (min-width: 62rem) {
     .gallery__item,
     .gallery .item {
-      height: 30.85722em; } }
+      height: 34.2858em; } }
   @media only screen and (min-width: 75rem) {
     .gallery__item,
     .gallery .item {
-      height: 34.2858em; } }
+      height: 41.14296em; } }
   @media only screen and (min-width: 90rem) {
     .gallery__item,
     .gallery .item {
-      height: 41.14296em; } }
+      height: 44.57154em; } }
 
 .gallery__image {
   width: 100%;
