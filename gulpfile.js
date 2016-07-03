@@ -167,7 +167,7 @@ gulp.task('favicon', function () {
 // Image Minification
 //==========================================
 gulp.task('imagemin', function() {
-  return gulp.src(['nate-baldwin-theme/**/*.*'])
+  return gulp.src(['nate-baldwin-theme/**/*.png'])
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{
