@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.2.2
+Version: 		2.2.3
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -18,7 +18,7 @@ Author URI: 	http://www.natebaldw.in
   box-sizing: border-box; }
 
 nav, header, body, input, button, form, textfield, table, tbody,
-thead, a, p, h1, h2, h3, h4, h5, h6, h7, cite, button, ul, ol, li, di, .nav {
+thead, a, .portfolio__title, p, h1, h2, h3, h4, h5, h6, h7, cite, button, ul, ol, li, di, .nav {
   margin: 0;
   padding: 0;
   outline: none;
@@ -63,11 +63,12 @@ audio:not([controls]) {
 template {
   display: none; }
 
-a {
+a, .portfolio__title {
   background-color: transparent; }
 
-a:active,
-a:hover {
+a:active, .portfolio__title:active,
+a:hover,
+.portfolio__title:hover {
   outline: 0; }
 
 abbr[title] {
@@ -653,13 +654,13 @@ footer {
   text-align: center;
   opacity: .5; }
 
-a {
+a, .portfolio__title {
   color: #417e7c;
   text-decoration: none;
   font-weight: 500;
   border-bottom: 3px solid #c4e1e0;
   transition: all 0.3s ease-in-out; }
-  a:hover, a:focus, a:active, a:active:hover, a:active:focus {
+  a:hover, .portfolio__title:hover, a:focus, .portfolio__title:focus, a:active, .portfolio__title:active, a:active:hover, .portfolio__title:active:hover, a:active:focus, .portfolio__title:active:focus {
     transition: all 0.3s ease-in-out;
     border-color: #52a09d; }
 
@@ -709,7 +710,7 @@ header {
         margin-left: 2rem;
         display: inline-block;
         font-size: 1.125rem; }
-        header .menu ul .page_item a {
+        header .menu ul .page_item a, header .menu ul .page_item .portfolio__title {
           text-decoration: none;
           padding: 0.85715em, 1rem;
           color: #52a09d; }
@@ -957,7 +958,9 @@ header {
   text-align: left;
   font-size: .875rem;
   margin: 0 .5rem 0 0;
-  padding-right: .5rem; }
+  padding-right: .5rem;
+  color: #888;
+  font-weight: 300; }
   .portfolio__tag:not(:last-child) {
     border-right: 1px solid #dadada; }
 
