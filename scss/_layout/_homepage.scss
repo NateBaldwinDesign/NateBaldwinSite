@@ -7,6 +7,18 @@
     background-size: cover;
     background-attachment: inherit;
 
+    // &::after {				// overlay secondary color over hero image
+    // 	display: block;
+    // 	content: ' ';
+    // 	position: absolute;
+    // 	top: 0;
+    // 	left: 0;
+    // 	background-color: $color-secondary;
+    // 	width: 100%;
+    // 	height: 100%;
+    // 	opacity: .05;
+    // }
+
     hgroup {text-align: center;}
 
 	@include query-small { 

@@ -28,7 +28,7 @@ var gulp = require('gulp'),
 
 gulp.task('bump', function(){
   gulp.src('./package.json')
-  .pipe(bump({type:'prerelease'}))
+  .pipe(bump({type:'patch'}))
   .pipe(gulp.dest('./'));
 });
 

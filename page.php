@@ -1,4 +1,4 @@
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <div class="l-section--primary l-section--pageheader">
 	<div class="l-section__content">

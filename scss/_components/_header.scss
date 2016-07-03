@@ -1,0 +1,83 @@
+header {
+	background-color: transparent;
+	position: absolute;
+	width: 100%;
+	padding: divide($baseline, 2);
+	margin: 0;
+	z-index: 1;
+
+	.menu {
+		display: inline-block;
+		width: 100%;
+
+		ul {
+			list-style: none;
+			width: 100%;
+			text-align: center;
+			margin: 0;
+	
+			.page_item {
+				@include margin-right(2rem);
+
+				display: inline-block;
+				font-size: 1.125rem;
+	
+				a {
+					text-decoration: none;
+					padding: divide($baseline, 2), 1rem;
+					color: $color-primary;
+				}
+			}
+		}
+	}
+
+	@include query-small {padding: $baseline;}
+}
+.header__logo {
+	display: block;
+	z-index: 1;
+
+	svg {
+		height: multiply($baseline, 2);
+		width: multiply($baseline, 1);
+		fill: rgba(0, 0, 0, .4);
+		transition: $transition-fast;
+
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:hover,
+		&:active:focus {
+			fill: rgba(0, 0, 0, .8);
+			transition: $transition-fast;
+		}
+	}
+
+	@include query-small {
+		display: inline-block; 
+
+		svg {
+			height: multiply($baseline, 3);
+			width: multiply($baseline, 1.5);
+		}
+	}
+}
+
+.header__logo--reversed {
+	@extend .header__logo;
+
+	svg {
+		fill: rgba(255, 255, 255, .5);
+
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:hover,
+		&:active:focus {fill: rgba(255, 255, 255, 1);}
+	}
+}
+
+.header__back-button {
+	position: fixed;
+	z-index: 100;
+}

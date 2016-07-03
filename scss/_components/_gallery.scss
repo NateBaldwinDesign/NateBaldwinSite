@@ -15,11 +15,11 @@
 	height: multiply($baseline, 8);
 	margin-bottom: multiply($baseline, 2);
 
-	@include query-xsmall {height: multiply($baseline, 12);}
-	@include query-small {height: multiply($baseline, 14);}
-	@include query-medium {height: multiply($baseline, 18);}
-	@include query-large {height: multiply($baseline, 20);}
-	@include query-xlarge {height: multiply($baseline, 24);}
+	@include query-xsmall {height: multiply($baseline, 14);}
+	@include query-small {height: multiply($baseline, 18);}
+	@include query-medium {height: multiply($baseline, 20);}
+	@include query-large {height: multiply($baseline, 24);}
+	@include query-xlarge {height: multiply($baseline, 26);}
 }
 
 .gallery__item,
@@ -30,11 +30,11 @@
 	height: multiply($baseline, 8);
 	overflow: hidden;
 
-	@include query-xsmall {height: multiply($baseline, 12);}
-	@include query-small {height: multiply($baseline, 14);}
-	@include query-medium {height: multiply($baseline, 18);}
-	@include query-large {height: multiply($baseline, 20);}
-	@include query-xlarge {height: multiply($baseline, 24);}
+	@include query-xsmall {height: multiply($baseline, 14);}
+	@include query-small {height: multiply($baseline, 18);}
+	@include query-medium {height: multiply($baseline, 20);}
+	@include query-large {height: multiply($baseline, 24);}
+	@include query-xlarge {height: multiply($baseline, 26);}
 }
 
 .gallery__image {
@@ -52,6 +52,7 @@
 
 .control-button {
 	text-decoration: none;
+	border: 0;
 	font-size: 2em;
 	font-family: monospace;
 

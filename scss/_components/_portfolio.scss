@@ -6,11 +6,13 @@
 
 .portfolio__link {
 	display: block;
+	margin-bottom: multiply($baseline, 3);
 }
 
 .portfolio__item {
 	display: block;
 	margin: 0;
+	border: 0;
 	text-decoration: none;
 	color: $text-color;
 
@@ -71,6 +73,7 @@
 	&:active:focus {
 		transition: $transition-medium;
 		opacity: 1;
+		border: 0;
 	}
 
 	@include query-xsmall {height: 350px}

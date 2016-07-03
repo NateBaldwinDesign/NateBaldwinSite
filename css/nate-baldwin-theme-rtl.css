@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.1.8-86
+Version: 		2.2.2
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -408,7 +408,7 @@ blockquote {
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 1.71429em;
-  border-left: 6px solid #cd4349;
+  border-left: 6px solid #52a09d;
   font-family: "signalistregular", "bitterregular", Georgia, serif;
   font-size: 2.25em;
   line-height: 0.95238;
@@ -548,21 +548,21 @@ body {
   padding-top: calc(1.71429em * 2); }
 
 .l-section--primary::before, .l-section--primary::after {
-  background-color: #cd4349; }
+  background-color: #52a09d; }
 
 .l-section--primary .l-section__content,
 .l-section--primary .l-container {
-  background-color: #cd4349; }
+  background-color: #52a09d; }
 
 .l-section--primary h1, .l-section--primary h2, .l-section--primary h3, .l-section--primary h4, .l-section--primary h5, .l-section--primary h6, .l-section--primary p {
   color: #fff; }
 
 .l-section--secondary::before, .l-section--secondary::after {
-  background-color: #d4e0e4; }
+  background-color: #B29509; }
 
 .l-section--secondary .l-section__content,
 .l-section--secondary .l-container {
-  background-color: #d4e0e4; }
+  background-color: #B29509; }
 
 .l-section--light-gray::before, .l-section--light-gray::after {
   background-color: #BDBDBD; }
@@ -633,6 +633,117 @@ body {
       margin: 7rem 0; } }
 
 /* Site CSS Components */
+.lead {
+  font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  max-width: 34ex; }
+
+.fancy-amp {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-style: italic; }
+
+footer {
+  font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: none;
+  margin: 1rem;
+  color: #fff;
+  font-size: .75em;
+  text-align: center;
+  opacity: .5; }
+
+a {
+  color: #417e7c;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 3px solid #c4e1e0;
+  transition: all 0.3s ease-in-out; }
+  a:hover, a:focus, a:active, a:active:hover, a:active:focus {
+    transition: all 0.3s ease-in-out;
+    border-color: #52a09d; }
+
+.icon__container, .icon__container--circle {
+  position: relative;
+  display: block;
+  padding: 0.42857em;
+  margin: 0;
+  border: 0; }
+
+.icon__container--circle {
+  border-radius: 50%;
+  background-color: #52a09d;
+  transition: all 0.3s ease-in-out; }
+  .icon__container--circle:hover, .icon__container--circle:focus, .icon__container--circle:active, .icon__container--circle:active:hover, .icon__container--circle:active:focus {
+    background-color: #417e7c;
+    transition: all 0.3s ease-in-out; }
+
+.icon {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  width: 1.71429em;
+  height: 1.71429em;
+  fill: #fff; }
+  @media only screen and (min-width: 62rem) {
+    .icon {
+      width: 2.57144em;
+      height: 2.57144em; } }
+
+header {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  padding: 0.85715em;
+  margin: 0;
+  z-index: 1; }
+  header .menu {
+    display: inline-block;
+    width: 100%; }
+    header .menu ul {
+      list-style: none;
+      width: 100%;
+      text-align: center;
+      margin: 0; }
+      header .menu ul .page_item {
+        margin-left: 2rem;
+        display: inline-block;
+        font-size: 1.125rem; }
+        header .menu ul .page_item a {
+          text-decoration: none;
+          padding: 0.85715em, 1rem;
+          color: #52a09d; }
+  @media only screen and (min-width: 48rem) {
+    header {
+      padding: 1.71429em; } }
+
+.header__logo, .header__logo--reversed {
+  display: block;
+  z-index: 1; }
+  .header__logo svg, .header__logo--reversed svg {
+    height: 3.42858em;
+    width: 1.71429em;
+    fill: rgba(0, 0, 0, 0.4);
+    transition: all 0.1s ease-in-out; }
+    .header__logo svg:hover, .header__logo--reversed svg:hover, .header__logo svg:focus, .header__logo--reversed svg:focus, .header__logo svg:active, .header__logo--reversed svg:active, .header__logo svg:active:hover, .header__logo--reversed svg:active:hover, .header__logo svg:active:focus, .header__logo--reversed svg:active:focus {
+      fill: rgba(0, 0, 0, 0.8);
+      transition: all 0.1s ease-in-out; }
+  @media only screen and (min-width: 48rem) {
+    .header__logo, .header__logo--reversed {
+      display: inline-block; }
+      .header__logo svg, .header__logo--reversed svg {
+        height: 5.14287em;
+        width: 2.57144em; } }
+
+.header__logo--reversed svg {
+  fill: rgba(255, 255, 255, 0.5); }
+  .header__logo--reversed svg:hover, .header__logo--reversed svg:focus, .header__logo--reversed svg:active, .header__logo--reversed svg:active:hover, .header__logo--reversed svg:active:focus {
+    fill: white; }
+
+.header__back-button {
+  position: fixed;
+  z-index: 100; }
+
 .footer__contact {
   position: absolute;
   top: -110px;
@@ -670,33 +781,6 @@ body {
     .footer__cta {
       margin-bottom: 0; } }
 
-.header__logo {
-  display: block;
-  position: relative;
-  width: 30%; }
-  .header__logo svg {
-    width: inherit; }
-
-.lead {
-  font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-  font-weight: 200;
-  max-width: 34ex; }
-
-.fancy-amp {
-  font-family: 'Sorts Mill Goudy', serif;
-  font-style: italic; }
-
-footer {
-  font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  display: none;
-  margin: 1rem;
-  color: #fff;
-  font-size: .75em;
-  text-align: center;
-  opacity: .5; }
-
 .social {
   padding-left: 2rem;
   display: inline-block;
@@ -722,13 +806,14 @@ footer {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: calc(0.85715em); }
+  margin-bottom: calc(0.85715em);
+  border: 0; }
   .social__item:hover, .social__item:focus, .social__item:active, .social__item:active:hover, .social__item:active:focus {
     transition: all 0.3s ease-in-out;
     opacity: 1; }
     .social__item:hover .social__icon, .social__item:focus .social__icon, .social__item:active .social__icon, .social__item:active:hover .social__icon, .social__item:active:focus .social__icon {
       transition: all 0.3s ease-in-out;
-      background-color: #af2e34; }
+      background-color: #417e7c; }
 
 .social__icon {
   margin-left: 1rem;
@@ -772,7 +857,7 @@ footer {
   width: 30%;
   opacity: .125; }
   #logo-accent svg {
-    fill: #cd4349; }
+    fill: #52a09d; }
   @media only screen and (min-width: 32rem) {
     #logo-accent {
       right: -10%; } }
@@ -792,11 +877,13 @@ footer {
   padding: 0; }
 
 .portfolio__link {
-  display: block; }
+  display: block;
+  margin-bottom: 5.14287em; }
 
 .portfolio__item {
   display: block;
   margin: 0;
+  border: 0;
   text-decoration: none;
   color: #000; }
   @media only screen and (min-width: 32rem) {
@@ -837,7 +924,8 @@ footer {
         bottom: -4.5rem; } }
   .portfolio__thumb:hover, .portfolio__thumb:focus, .portfolio__thumb:active, .portfolio__thumb:active:hover, .portfolio__thumb:active:focus {
     transition: all 0.3s ease-in-out;
-    opacity: 1; }
+    opacity: 1;
+    border: 0; }
   @media only screen and (min-width: 32rem) {
     .portfolio__thumb {
       height: 350px; } }
@@ -1266,19 +1354,19 @@ footer {
   margin-bottom: 3.42858em; }
   @media only screen and (min-width: 32rem) {
     .gallery {
-      height: 20.57148em; } }
+      height: 24.00006em; } }
   @media only screen and (min-width: 48rem) {
     .gallery {
-      height: 24.00006em; } }
+      height: 30.85722em; } }
   @media only screen and (min-width: 62rem) {
     .gallery {
-      height: 30.85722em; } }
+      height: 34.2858em; } }
   @media only screen and (min-width: 75rem) {
     .gallery {
-      height: 34.2858em; } }
+      height: 41.14296em; } }
   @media only screen and (min-width: 90rem) {
     .gallery {
-      height: 41.14296em; } }
+      height: 44.57154em; } }
 
 .gallery__item,
 .gallery .item {
@@ -1290,23 +1378,23 @@ footer {
   @media only screen and (min-width: 32rem) {
     .gallery__item,
     .gallery .item {
-      height: 20.57148em; } }
+      height: 24.00006em; } }
   @media only screen and (min-width: 48rem) {
     .gallery__item,
     .gallery .item {
-      height: 24.00006em; } }
+      height: 30.85722em; } }
   @media only screen and (min-width: 62rem) {
     .gallery__item,
     .gallery .item {
-      height: 30.85722em; } }
+      height: 34.2858em; } }
   @media only screen and (min-width: 75rem) {
     .gallery__item,
     .gallery .item {
-      height: 34.2858em; } }
+      height: 41.14296em; } }
   @media only screen and (min-width: 90rem) {
     .gallery__item,
     .gallery .item {
-      height: 41.14296em; } }
+      height: 44.57154em; } }
 
 .gallery__image {
   width: 100%;
@@ -1321,6 +1409,7 @@ footer {
 
 .control-button {
   text-decoration: none;
+  border: 0;
   font-size: 2em;
   font-family: monospace; }
   @media only screen and (min-width: 48rem) {
