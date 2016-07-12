@@ -6,6 +6,11 @@
     } else { document.getElementById("baseline").className += " show-grid"; }
   }
   document.getElementById("gridtoggle").addEventListener( 'click' , changeClass );
+  
+  function goBack() {
+      window.history.back();
+  }
+
   </script>
 	</body>
 </html>

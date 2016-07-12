@@ -15,6 +15,7 @@
 	border: 0;
 	text-decoration: none;
 	color: $text-color;
+	text-align: left;
 
 	@include query-xsmall {margin: 0 4rem;}
 	@include query-small {margin: 0;}
@@ -37,20 +38,6 @@
 		background-color: #fff;
 		// opacity: .5;
 	}
-
-	// &::before {
-	// 	content: " ";
-	// 	position: absolute;
-	// 	height: 4rem;
-	// 	top: -4.5rem;
-	// 	left: 0;
-	// 	right: 0;
-	// 	transform: skewY(-4deg);
-	// 	z-index: 0;
-
-	// 	@include query-medium {top: -4.5rem;}
-	// 	@include query-large {top: -4.5rem;}
-	// }
 
 	&::after {
 		content: " ";
@@ -85,6 +72,9 @@
 }
 
 .portfolio__title {
+	@extend a;
+
+	display: inline-block;
 	margin: .5rem 0 0;
 	font-weight: 600;
 	text-align: left;
@@ -92,7 +82,7 @@
 
 .portfolio__tag-list {
 	list-style: none;
-	margin-top: -.25rem;
+	margin-top: 0;
     text-align: left;
 }
 
@@ -102,6 +92,8 @@
 	font-size: .875rem;
 	margin: 0 .5rem 0 0;
 	padding-right: .5rem;
+	color: #888;
+	font-weight: 300;
 
 	&:not(:last-child) {border-right: 1px solid #dadada;}
 }

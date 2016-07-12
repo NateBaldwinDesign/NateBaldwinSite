@@ -1,30 +1,33 @@
 'use strict';
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    cssSortConfig = require('./smacss.json'),
-    clean = require('gulp-rimraf'),
-    zip = require('gulp-zip'),
-    cssnano = require('gulp-cssnano'),
-    sourcemaps = require("gulp-sourcemaps"),
-    scsslint = require('gulp-scss-lint'),
-    importOnce = require('node-sass-import-once'),
-    autoprefixer = require('gulp-autoprefixer'),
-    gulpPostcss = require('gulp-postcss'),
-    gulpPostcssSort = require('postcss-sorting'),
-    cssSortConfig = require('./smacss.json'),
-    rename = require('gulp-rename'),
-    svgmin = require('gulp-svgmin'),
-    svgstore = require('gulp-svgstore'),
-    cheerio = require('gulp-cheerio'),
-    pngquant = require('imagemin-pngquant'),
-    imagemin = require('gulp-imagemin'),
-    nb_package = require('./package.json'),
-    insert = require('gulp-insert'),
-    replace = require('gulp-replace'),
-    packageJson = require('./package.json'),
-    version = packageJson.version,
-    bump = require('gulp-bump'),
-    watchOptions = {interval: 1000};
+var gulp              = require('gulp'),
+    sass              = require('gulp-sass'),
+    cssSortConfig     = require('./smacss.json'),
+    clean             = require('gulp-rimraf'),
+    zip               = require('gulp-zip'),
+    cssnano           = require('gulp-cssnano'),
+    sourcemaps        = require("gulp-sourcemaps"),
+    scsslint          = require('gulp-scss-lint'),
+    importOnce        = require('node-sass-import-once'),
+    autoprefixer      = require('gulp-autoprefixer'),
+    gulpPostcss       = require('gulp-postcss'),
+    gulpPostcssSort   = require('postcss-sorting'),
+    cssSortConfig     = require('./smacss.json'),
+    rename            = require('gulp-rename'),
+    svgmin            = require('gulp-svgmin'),
+    svgstore          = require('gulp-svgstore'),
+    cheerio           = require('gulp-cheerio'),
+    pngquant          = require('imagemin-pngquant'),
+    imagemin          = require('gulp-imagemin'),
+    nb_package        = require('./package.json'),
+    insert            = require('gulp-insert'),
+    replace           = require('gulp-replace'),
+    packageJson       = require('./package.json'),
+    version           = packageJson.version,
+    bump              = require('gulp-bump'),
+    favicons          = require("gulp-favicons"),
+    gutil             = require("gulp-util"),
+    svg2png           = require('gulp-svg2png'),
+    watchOptions      = {interval: 1000};
 
 gulp.task('bump', function(){
   gulp.src('./package.json')
@@ -132,24 +135,39 @@ gulp.task('svg-sprite', ['svg-imagemin'], function() {
     .pipe(rename('custom-portfolio-sprite.svg'))
     .pipe(gulp.dest('icons'));
 });
-// Change sprite to PHP file
-gulp.task('sprite-php-wrap', ['svg-sprite'], function() {
-  return gulp.src('icons/custom-portfolio-sprite.svg')
-    .pipe(insert.wrap('<?php ?> ', '<?php ?>'))
-    .pipe(gulp.dest('parts/shared'));
-});
-gulp.task('sprite-php', ['sprite-php-wrap'], function() {
-  gulp.src("parts/shared/custom-portfolio-sprite.svg")
-    .pipe(rename("custom-portfolio-sprite.php"))
-    .pipe(gulp.dest("parts/shared"))
+
+//==========================================
+// Generate Favicon
+//==========================================
+
+gulp.task('favicon', function () {
+  return gulp.src("img/NB_head-logo.png")
+    .pipe(favicons({
+      appName: "Nate Baldwin",
+      appDescription: "Portfolio website",
+      developerName: "Nate Baldwin",
+      developerURL: "http://natebaldw.in",
+      background: "#ffffff",
+      path: "favicons/",
+      url: "http://natebaldw.in",
+      display: "standalone",
+      orientation: "portrait",
+      version: version,
+      logging: false,
+      online: false,
+      html: "index.html",
+      pipeHTML: true,
+      replace: true
+    }))
+    .on("error", gutil.log)
+    .pipe(gulp.dest("nate-baldwin-theme/favicon/"));
 });
 
 //==========================================
 // Image Minification
 //==========================================
-// Minify images used in Style Guide site
 gulp.task('imagemin', function() {
-  return gulp.src(['img/*', '!custom-portfolio-sprite.svg'])
+  return gulp.src(['nate-baldwin-theme/**/*.png'])
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{
@@ -215,12 +233,12 @@ gulp.task('clean-temp', ['archive'], function() {
 // Environments
 //==========================================
 
-gulp.task('copy', ['clean-archive', 'copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css', 'copy-icons', 'copy-screenshot'], function() {
+gulp.task('copy', ['clean-archive', 'copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css', 'copy-icons', 'copy-screenshot', 'favicon'], function() {
   return gulp.src('nate-baldwin-theme/**/*.*')
     .pipe(zip('nate-baldwin-theme-' + nb_package.version + '.zip')) 
     .pipe(gulp.dest('builds'));
 });
 
-gulp.task('default', ['copy'], function() {
+gulp.task('default', ['copy', 'imagemin'], function() {
     return gulp.src(['nate-baldwin-theme']).pipe(clean());
 })

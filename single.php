@@ -16,21 +16,21 @@
 		<div class="l-container">
 			<article>
 				<ul class="portfolio__tag-list--large">
-					<li class="portfolio__tag"><?php echo types_render_field( "project-responsibilities", array("separator" 	=> "</li><li class='portfolio__tag'>") ) ?></li></ul>
+					<li class="portfolio__tag"><?php echo types_render_field( "project-responsibilities", array("separator" 	=> "</li><li class='portfolio__tag'>") ) ?></li>
+				</ul>
+				
 				<h3>Overview</h3>
 				<?php echo types_render_field( "project-overview", array("class" => "project-overview") ) ?>
-				<div class="gallery">
-					<div id="item-1" class="control-operator"></div>
-					<div id="item-2" class="control-operator"></div>
-					<div id="item-3" class="control-operator"></div>
-					<figure class="gallery__item item"><?php echo types_render_field( "gallery", array("alt" => "Nate Baldwin portfolio media", "title" => "Nate Baldwin Portfolio", "class" => "gallery__image", "separator" 	=> "</figure><figure class='gallery__item item'>") ) ?>
-					</figure>
-					<div class="controls">
-						<a href="#item-1" class="control-button">•</a>
-						<a href="#item-2" class="control-button">•</a>
-						<a href="#item-3" class="control-button">•</a>
-					</div>
-				</div>
+			</article>
+		</div>
+
+		<div class="gallery" data-flickity='{ "cellAlign": "center", "contain": false, "cellSelector": ".gallery__item", "setGallerySize": false, "imagesLoaded": true }'>
+			<figure class="gallery__item"><?php echo types_render_field( "gallery", array("alt" => "Nate Baldwin portfolio media", "title" => "Nate Baldwin Portfolio", "class" => "gallery__image", "separator" 	=> "</figure><figure class='gallery__item'>") ) ?>
+			</figure>
+		</div>
+
+		<div class="l-container">
+			<article>
 				<?php the_content(); ?>
 			</article>
 		</div>

@@ -47,7 +47,7 @@
 .homepage__quote {
 	text-align: center;
 	max-width: 60ex;
-	font-weight: 200;
+	font-weight: 300;
 	margin: 3rem 0;
 
 	h1,
@@ -59,4 +59,6 @@
 	blockquote {font-weight: 300;}
 
 	@include query-small {margin: 7rem 0;}
+
+	@include query-medium {font-weight: 200;}
 }
