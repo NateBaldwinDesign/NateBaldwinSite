@@ -1,8 +1,8 @@
 <header>
-	<a class="icon__container--circle header__back-button" href="<?php echo get_site_url(); ?>">
+	<button class="icon__container--circle header__back-button" onClick="goBack()">
 		<svg class="icon">
 			<use xlink:href="#icon-arrow-left"></use>
 		</svg>
-	</a>
+	</button>
 <!-- 	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'class' => 'header__nav' ) ); ?>-->
 </header>

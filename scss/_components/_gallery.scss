@@ -1,48 +1,51 @@
-.gallery {
-	position: relative;
+%gallery-placeholder {
 	height: multiply($baseline, 8);
 	margin-bottom: multiply($baseline, 2);
 
 	@include query-xsmall {height: multiply($baseline, 14);}
-	@include query-small {height: multiply($baseline, 18);}
-	@include query-medium {height: multiply($baseline, 20);}
-	@include query-large {height: multiply($baseline, 24);}
+	@include query-small {height: multiply($baseline, 16);}
+	@include query-medium {height: multiply($baseline, 18);}
+	@include query-large {height: multiply($baseline, 22);}
 	@include query-xlarge {height: multiply($baseline, 26);}
 }
 
-.gallery__item,
-.gallery .item {
-	display: block;
-	width: 100%;
-	margin: 0;
-	height: multiply($baseline, 8);
-	overflow: hidden;
+.gallery__wrapper {
+	@extend %gallery-placeholder;
 
-	@include query-xsmall {height: multiply($baseline, 14);}
-	@include query-small {height: multiply($baseline, 18);}
-	@include query-medium {height: multiply($baseline, 20);}
-	@include query-large {height: multiply($baseline, 24);}
-	@include query-xlarge {height: multiply($baseline, 26);}
+	left: 0;
+	right: 0;
+}
+
+.gallery {
+	@extend %gallery-placeholder;
+
+	position: relative;
+	left: 0;
+	right: 0;
+	background-color: #f7f7f7;
+}
+.gallery__shim {
+	@extend %gallery-placeholder;
+
+	position: relative;
+}
+
+.gallery__item {
+	display: flex;
+	height: 100%;
+	width: 81%;
+	margin: 0;
+	overflow: hidden;
 }
 
 .gallery__image {
 	width: 100%;
 	display: block;
+	align-self: center;
 }
 
-.controls {
-    position: absolute;
-    bottom: multiply($baseline, -2);
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-}
+.flickity-prev-next-button {
+	display: none;
 
-.control-button {
-	text-decoration: none;
-	border: 0;
-	font-size: 2em;
-	font-family: monospace;
-
-	@include query-small {font-size: 3em;}
+	@include query-small {display: block;}
 }
