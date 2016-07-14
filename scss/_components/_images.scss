@@ -37,7 +37,8 @@
 %mobile-alignment {
 	display: block;
 	margin: 0 auto;
-	padding-top: $baseline;
+	padding-bottom: $baseline;
+	padding-top: 0;
 	padding-left: 0;
 	padding-right: 0;
 	float: none;
@@ -54,17 +55,25 @@
 
 	@include query-small {	
 		@include float(right);
-	    @include margin-right(-75%);
 	    @include margin-left($baseline);
 
 	    &.size-medium {
-		    width: 300px;
+		    @include margin-right(-20%);
+
+		    width: 50%;
 		    height: auto;
 	    }
 	    &.size-large {
-		    width: 600px;
+		    @include margin-right(-60%);
+
+		    width: 100%;
 		    height: auto;
 	    }
+	}
+
+	@include query-medium {
+		&.size-medium {@include margin-right(-15%);}
+		&.size-large {@include margin-right(-55%);}
 	}
 }
 
@@ -79,11 +88,11 @@
 	    height: auto;
 
 	    &.size-medium {
-		    width: 300px;
+		    width: 50%;
 		    height: auto;
 	    }
 	    &.size-large {
-		    width: 600px;
+		    width: 100%;
 		    height: auto;
 	    }
 	}

@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.2.9-1
+Version: 		2.2.15
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -383,9 +383,6 @@ p {
   padding-bottom: 0;
   max-width: 41.14286em;
   font-size: 1.125em; }
-  @media only screen and (min-width: 48rem) {
-    p {
-      text-align: justify; } }
 
 p + p {
   margin-top: -1.71429em;
@@ -880,7 +877,8 @@ header {
 .alignright, .alignleft, .aligncenter {
   display: block;
   margin: 0 auto;
-  padding-top: 1.71429em;
+  padding-bottom: 1.71429em;
+  padding-top: 0;
   padding-left: 0;
   padding-right: 0;
   float: none; }
@@ -891,14 +889,21 @@ header {
 @media only screen and (min-width: 48rem) {
   .alignright {
     float: right ;
-    margin-right: -75%;
     margin-left: 1.71429em; }
     .alignright.size-medium {
-      width: 300px;
+      margin-right: -20%;
+      width: 50%;
       height: auto; }
     .alignright.size-large {
-      width: 600px;
+      margin-right: -60%;
+      width: 100%;
       height: auto; } }
+
+@media only screen and (min-width: 62rem) {
+  .alignright.size-medium {
+    margin-right: -15%; }
+  .alignright.size-large {
+    margin-right: -55%; } }
 
 @media only screen and (min-width: 48rem) {
   .alignleft {
@@ -908,10 +913,10 @@ header {
     width: 600px;
     height: auto; }
     .alignleft.size-medium {
-      width: 300px;
+      width: 50%;
       height: auto; }
     .alignleft.size-large {
-      width: 600px;
+      width: 100%;
       height: auto; } }
 
 @media only screen and (min-width: 48rem) {
@@ -957,29 +962,11 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  opacity: .5;
+  opacity: 1;
   transition: all 0.3s ease-in-out; }
-  .portfolio__thumb::before, .portfolio__thumb::after {
-    background-color: #fff; }
-  .portfolio__thumb::after {
-    content: " ";
-    position: absolute;
-    height: 4rem;
-    bottom: -4.5rem;
-    left: 0;
-    right: 0;
-    -webkit-transform: skewY(-4deg);
-            transform: skewY(-4deg);
-    z-index: 0; }
-    @media only screen and (min-width: 62rem) {
-      .portfolio__thumb::after {
-        bottom: -4.5rem; } }
-    @media only screen and (min-width: 75rem) {
-      .portfolio__thumb::after {
-        bottom: -4.5rem; } }
   .portfolio__thumb:hover, .portfolio__thumb:focus, .portfolio__thumb:active, .portfolio__thumb:active:hover, .portfolio__thumb:active:focus {
     transition: all 0.3s ease-in-out;
-    opacity: 1;
+    opacity: .5;
     border: 0; }
   @media only screen and (min-width: 32rem) {
     .portfolio__thumb {
