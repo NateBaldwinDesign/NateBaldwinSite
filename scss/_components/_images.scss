@@ -34,26 +34,76 @@
 	@include query-xlarge {width: 24%;}
 }
 
-.alignright {
-	@include float(right);
-    @include margin-right(-35%);
-    @include margin-left($baseline);
-    width: 600px;
-    height: auto;
-}
-
-.alignleft {
-	@include float(left);
-    @include margin-left(-35%);
-    @include margin-right($baseline);
-    width: 600px;
-    height: auto;
-}
-
-.aligncenter {
+%mobile-alignment {
 	display: block;
 	margin: 0 auto;
 	padding-top: $baseline;
-	padding-left: multiply($baseline, .75);
-	padding-right: multiply($baseline, .75);
+	padding-left: 0;
+	padding-right: 0;
+	float: none;
+
+	&.size-medium,
+	&.size-large {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.alignright {
+	@extend %mobile-alignment;
+
+	@include query-small {	
+		@include float(right);
+	    @include margin-right(-75%);
+	    @include margin-left($baseline);
+
+	    &.size-medium {
+		    width: 300px;
+		    height: auto;
+	    }
+	    &.size-large {
+		    width: 600px;
+		    height: auto;
+	    }
+	}
+}
+
+.alignleft {
+	@extend %mobile-alignment;
+
+	@include query-small {
+		@include float(left);
+	    @include margin-left(-35%);
+	    @include margin-right($baseline);
+	    width: 600px;
+	    height: auto;
+
+	    &.size-medium {
+		    width: 300px;
+		    height: auto;
+	    }
+	    &.size-large {
+		    width: 600px;
+		    height: auto;
+	    }
+	}
+}
+
+.aligncenter {
+	@extend %mobile-alignment;
+
+	@include query-small {
+		padding-left: multiply($baseline, .75);
+		padding-right: multiply($baseline, .75);
+
+		&.size-medium {
+			width: 75%;
+			height: auto;
+		}
+
+		&.size-large {
+			width: 100%;
+			height: auto;
+		}
+	}
 }

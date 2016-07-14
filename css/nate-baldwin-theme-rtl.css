@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.2.7-22
+Version: 		2.2.9-1
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -877,26 +877,53 @@ header {
     #logo-accent {
       width: 24%; } }
 
-.alignright {
-  float: left ;
-  margin-left: -35%;
-  margin-right: 1.71429em;
-  width: 600px;
-  height: auto; }
-
-.alignleft {
-  float: right ;
-  margin-right: -35%;
-  margin-left: 1.71429em;
-  width: 600px;
-  height: auto; }
-
-.aligncenter {
+.alignright, .alignleft, .aligncenter {
   display: block;
   margin: 0 auto;
   padding-top: 1.71429em;
-  padding-left: 1.28572em;
-  padding-right: 1.28572em; }
+  padding-left: 0;
+  padding-right: 0;
+  float: none; }
+  .size-medium.alignright, .size-medium.alignleft, .size-medium.aligncenter, .size-large.alignright, .size-large.alignleft, .size-large.aligncenter {
+    width: 100%;
+    height: auto; }
+
+@media only screen and (min-width: 48rem) {
+  .alignright {
+    float: left ;
+    margin-left: -75%;
+    margin-right: 1.71429em; }
+    .alignright.size-medium {
+      width: 300px;
+      height: auto; }
+    .alignright.size-large {
+      width: 600px;
+      height: auto; } }
+
+@media only screen and (min-width: 48rem) {
+  .alignleft {
+    float: right ;
+    margin-right: -35%;
+    margin-left: 1.71429em;
+    width: 600px;
+    height: auto; }
+    .alignleft.size-medium {
+      width: 300px;
+      height: auto; }
+    .alignleft.size-large {
+      width: 600px;
+      height: auto; } }
+
+@media only screen and (min-width: 48rem) {
+  .aligncenter {
+    padding-left: 1.28572em;
+    padding-right: 1.28572em; }
+    .aligncenter.size-medium {
+      width: 75%;
+      height: auto; }
+    .aligncenter.size-large {
+      width: 100%;
+      height: auto; } }
 
 .portfolio {
   list-style: none;
