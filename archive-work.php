@@ -9,7 +9,6 @@
 					<use xlink:href="#icon-NB_logo_type"></use>
 				</svg>
 			</span>
-			<!-- <h1 class="heading">Nate Baldwin</h1> -->
 			<h2 class="lead">User Experience Designer, Illustrator, Artist &amp; Front-end Developer</h2>
 		</hgroup>
 	</div>
@@ -23,7 +22,6 @@
 		</div>
 	</div>
 </div>
-
 
 <div class="l-section--white">
 	<div class="l-section__content">
@@ -63,26 +61,15 @@
 	</div>
 </div>
 
-<!-- 
-<div class="l-section--light-gray">
-	<div class="l-section__content">
-		<div class="l-container--fluid l-container--center">
-			What I Do Here
-		</div>
-	</div>
-</div> -->
-
-
 <div class="l-section--primary">
 	<div class="l-section__content">
 		<div class="l-container row center-xs">
 			<div class="footer__cta col-xs-12 col-sm-8">
 				<h5 class="h1"> Let's Chat! </h5>
 			</div>
-			<div class="col-xs-6 col-sm-4">
+			<div class="col-xs-10 col-sm-4">
 				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/social-links','parts/shared/footer','parts/shared/html-footer' ) ); ?>
 			</div>
 		</div>
 	</div>
 </div>
-

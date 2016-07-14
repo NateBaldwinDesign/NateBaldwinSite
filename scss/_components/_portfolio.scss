@@ -30,28 +30,8 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	overflow: hidden;
-	opacity: .5;
+	opacity: 1;
 	transition: $transition-medium;
-
-	&::before,
-	&::after {
-		background-color: #fff;
-		// opacity: .5;
-	}
-
-	&::after {
-		content: " ";
-		position: absolute;
-		height: 4rem;
-		bottom: -4.5rem;
-		left: 0;
-		right: 0;
-		transform: skewY(-4deg);
-		z-index: 0;
-
-		@include query-medium {bottom: -4.5rem;}
-		@include query-large {bottom: -4.5rem;}
-	}
 
 	&:hover,
 	&:focus,
@@ -59,7 +39,7 @@
 	&:active:hover,
 	&:active:focus {
 		transition: $transition-medium;
-		opacity: 1;
+		opacity: .5;
 		border: 0;
 	}
 
