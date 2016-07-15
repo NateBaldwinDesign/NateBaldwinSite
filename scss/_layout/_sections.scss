@@ -16,21 +16,11 @@
 
 		@include query-medium {top: calc(#{$baseline} * -1.8215);}
 		@include query-large {top: calc(#{$baseline} * -2.125);}
+		@include query-xlarge {
+			top: calc(#{$baseline} * -4.125);
+			height: 25rem;
+		}
 	}
-
-	// &::after {
-	// 	content: " ";
-	// 	position: absolute;
-	// 	height: 12rem;
-	// 	bottom: calc(#{$baseline} * -1.5125);
-	// 	left: 0;
-	// 	right: 0;
-	// 	transform: skewY(-4deg);
-	// 	z-index: -1;
-
-	// 	@include query-medium {bottom: calc(#{$baseline} * -1.8215);}
-	// 	@include query-large {bottom: calc(#{$baseline} * -2);}
-	// }
 }
 
 .l-section__content {
@@ -38,6 +28,8 @@
 	width: 100%;
 	margin: -2px 0 0;
 	padding-bottom: 3rem;
+
+	@include query-xlarge {padding-bottom: 10rem;}
 }
 
 .l-section--pageheader {
