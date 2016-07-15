@@ -24,7 +24,11 @@
     	width: 240px;
 	}
 
-	@include query-large {width: 240px;}
+	@include query-large {
+		width: 240px;
+		top: -160px;
+	}
+	@include query-xlarge {top: -190px;}
 }
 
 .footer__cta {

@@ -26,6 +26,7 @@
 		background-attachment: fixed;
 	}
 	@include query-medium { padding: calc(#{$baseline} * 4) calc(#{$baseline} * 2) calc(#{$baseline} * 5);}
+	@include query-xlarge { padding: calc(#{$baseline} * 6) calc(#{$baseline} * 2) calc(#{$baseline} * 8);}
 }
 
 .hero-logo__wrapper {

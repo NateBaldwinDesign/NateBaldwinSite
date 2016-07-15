@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.2.16
+Version: 		2.2.17
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -603,6 +603,9 @@ body {
   @media only screen and (min-width: 62rem) {
     .l-section--hero {
       padding: calc(1.71429em * 4) calc(1.71429em * 2) calc(1.71429em * 5); } }
+  @media only screen and (min-width: 90rem) {
+    .l-section--hero {
+      padding: calc(1.71429em * 6) calc(1.71429em * 2) calc(1.71429em * 8); } }
 
 .hero-logo__wrapper {
   display: block;
@@ -784,7 +787,11 @@ header {
       width: 240px; } }
   @media only screen and (min-width: 75rem) {
     .footer__contact {
-      width: 240px; } }
+      width: 240px;
+      top: -160px; } }
+  @media only screen and (min-width: 90rem) {
+    .footer__contact {
+      top: -190px; } }
 
 .footer__cta {
   -webkit-align-self: center;
