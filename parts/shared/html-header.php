@@ -13,8 +13,8 @@
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon/favicon.ico"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
 		<!-- Flickety -->
-		<link rel="stylesheet" href="https://npmcdn.com/flickity@2.0/dist/flickity.css" media="screen">
-		<script src="https://npmcdn.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css" media="screen">
+		<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
 		
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
  		<?php wp_head(); ?>
