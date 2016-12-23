@@ -233,9 +233,9 @@ gulp.task('clean-temp', ['archive'], function() {
 // Environments
 //==========================================
 
-gulp.task('copy', ['clean-archive', 'copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-css', 'copy-icons', 'copy-screenshot', 'favicon'], function() {
+gulp.task('copy', ['clean-archive', 'copy-css', 'copy-php', 'copy-img', 'copy-external', 'copy-fonts', 'copy-js', 'copy-icons', 'copy-parts', 'copy-icons', 'copy-screenshot', 'favicon'], function() {
   return gulp.src('nate-baldwin-theme/**/*.*')
-    .pipe(zip('nate-baldwin-theme-' + nb_package.version + '.zip')) 
+    .pipe(zip('nate-baldwin-theme-' + nb_package.version + '.zip'))
     .pipe(gulp.dest('builds'));
 });
 
