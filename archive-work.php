@@ -1,6 +1,8 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header' ) ); ?>
 
 <div class="l-section--hero">
+	<?php wp_nav_menu( array( 'theme_location' => 'Main-Menu', 'container_class' => 'navmenu--hero' ) ); ?>
+
 	<div class="l-container--fluid u-flex-center">
 		<hgroup class="hero-group">
 			<span class="hero-logo__wrapper">
@@ -9,7 +11,7 @@
 					<use xlink:href="#icon-NB_logo_type"></use>
 				</svg>
 			</span>
-			<h2 class="lead">User Experience Designer, Illustrator, Artist &amp; Front-end Developer</h2>
+			<h2 class="lead">User Experience Designer, Illustrator, Artist &amp; Developer</h2>
 		</hgroup>
 	</div>
 </div>

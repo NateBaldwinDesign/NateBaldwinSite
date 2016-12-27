@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.2.21
+Version: 		2.2.29
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -499,15 +499,20 @@ body {
 .l-section--primary,
 .l-section--secondary,
 .l-section--light-gray,
-.l-section--white {
+.l-section--white,
+.l-section--image {
   position: relative;
   width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 0; }
   .l-section::before,
   .l-section--primary::before,
   .l-section--secondary::before,
   .l-section--light-gray::before,
-  .l-section--white::before {
+  .l-section--white::before,
+  .l-section--image::before {
     content: " ";
     position: absolute;
     height: 12rem;
@@ -521,14 +526,16 @@ body {
       .l-section--primary::before,
       .l-section--secondary::before,
       .l-section--light-gray::before,
-      .l-section--white::before {
+      .l-section--white::before,
+      .l-section--image::before {
         top: calc(1.71429em * -1.8215); } }
     @media only screen and (min-width: 75rem) {
       .l-section::before,
       .l-section--primary::before,
       .l-section--secondary::before,
       .l-section--light-gray::before,
-      .l-section--white::before {
+      .l-section--white::before,
+      .l-section--image::before {
         top: calc(1.71429em * -2.125); } }
 
 .l-section__content {
@@ -571,6 +578,20 @@ body {
 .l-section--white .l-container {
   background-color: #fff; }
 
+.l-section--image {
+  color: #fff; }
+  .l-section--image::before, .l-section--image::after {
+    background-color: transparent;
+    background: black;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, black), color-stop(100%, transparent));
+    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 ); }
+  .l-section--image::before {
+    height: 22em; }
+  .l-section--image .l-section__content,
+  .l-section--image .l-container {
+    background-color: transparent; }
+
 .l-section--hero {
   display: block;
   margin: 0;
@@ -587,12 +608,10 @@ body {
     .l-section--hero {
       padding: calc(1.71429em * 4) calc(1.71429em * 2) calc(1.71429em * 5); } }
 
-.l-section--hero hgroup,
 .hero-group {
   display: block;
   text-align: center; }
   @media only screen and (min-width: 62rem) {
-    .l-section--hero hgroup,
     .hero-group {
       display: -ms-flexbox;
       display: flex;
@@ -633,7 +652,8 @@ body {
     .lead {
       display: inline-block;
       padding-left: 1em;
-      padding-bottom: 1.71429em; } }
+      padding-bottom: 1.71429em;
+      margin-bottom: 0; } }
 
 .homepage__quote {
   text-align: center;
@@ -654,6 +674,31 @@ body {
   @media only screen and (min-width: 62rem) {
     .homepage__quote {
       font-weight: 200; } }
+
+.article-list {
+  width: 100%;
+  margin: 0;
+  list-style: none; }
+
+.article-list__item {
+  padding-bottom: 1.71429em;
+  margin-bottom: 1.71429em;
+  border-bottom: 1px solid #c4e1e0; }
+  @media only screen and (min-width: 62rem) {
+    .article-list__item {
+      padding-bottom: calc(1.71429em * 2);
+      margin-bottom: calc(1.71429em * 2); } }
+  @media only screen and (min-width: 75rem) {
+    .article-list__item {
+      padding-bottom: calc(1.71429em * 3);
+      margin-bottom: calc(1.71429em * 3); } }
+
+.date-stamp {
+  display: block;
+  margin-top: calc(1.71429em / 2);
+  margin-bottom: calc(1.71429em / 2);
+  color: #888;
+  font-size: .875rem; }
 
 /* Site CSS Components */
 .fancy-amp {
@@ -683,6 +728,9 @@ a, .portfolio__title {
 
 article {
   width: 100%; }
+
+time {
+  text-transform: none; }
 
 .icon__container, .icon__container--circle {
   position: relative;
