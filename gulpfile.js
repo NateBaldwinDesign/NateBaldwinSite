@@ -31,7 +31,7 @@ var gulp              = require('gulp'),
 
 gulp.task('bump', function(){
   gulp.src('./package.json')
-  .pipe(bump({type:'patch'}))
+  .pipe(bump({type:'patch'})) // major / minor / patch
   .pipe(gulp.dest('./'));
 });
 

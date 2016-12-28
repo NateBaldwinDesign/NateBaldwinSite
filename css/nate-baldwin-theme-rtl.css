@@ -3,7 +3,7 @@
 Theme Name: 	Nate Baldwin Custom
 Theme URI: 		http://www.natebaldw.in
 Description: 	Nate Baldwin's Personal Portfolio Theme
-Version: 		2.2.36
+Version: 		2.2.46
 Author: 		Nate Baldwin
 Author URI: 	http://www.natebaldw.in
 ===========================*/
@@ -409,8 +409,7 @@ blockquote {
   border-left: 6px solid #52a09d;
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
-  line-height: 0.85714;
-  font-size: 3.5em; }
+  line-height: 1.14286; }
   blockquote p {
     margin-bottom: 0.42857em; }
   blockquote footer cite:before {
@@ -732,6 +731,13 @@ article {
 time {
   text-transform: none; }
 
+cite {
+  display: inline-block;
+  margin-bottom: 1.71429em; }
+
+cite a, cite .portfolio__title {
+  font-weight: 300; }
+
 .icon__container, .icon__container--circle {
   position: relative;
   display: block;
@@ -762,7 +768,7 @@ time {
 header {
   background-color: transparent;
   position: absolute;
-  width: 100%;
+  width: 80%;
   top: 0;
   padding: 0.85715em;
   margin: 0;

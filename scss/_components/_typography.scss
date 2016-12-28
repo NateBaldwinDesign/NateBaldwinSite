@@ -34,3 +34,12 @@ a {
 article {width: 100%;}
 
 time {text-transform: none;}
+
+cite {
+  display: inline-block;
+  margin-bottom: $baseline;
+}
+
+cite a {
+  font-weight: 300;
+}

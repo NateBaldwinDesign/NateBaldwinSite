@@ -415,8 +415,8 @@ body {
     padding-left: emRhythm(4);
     border-left: $base-vertical-unit solid $color-primary;
     font-family: $font-sans;
-    @include setType(3, $ms-up1); // 5, $ms-up2
-    font-size: 3.5em; // 3.5em
+    @include setType(4, $ms-up1); // 5, $ms-up2
+    // font-size: 3.5em; // 3.5em
 
     p {
       margin-bottom: emRhythm(1);
