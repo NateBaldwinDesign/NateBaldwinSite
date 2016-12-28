@@ -1,8 +1,9 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header' ) ); ?>
 
 <div class="l-section--hero">
-	<?php wp_nav_menu( array( 'theme_location' => 'Main-Menu', 'container_class' => 'navmenu--hero' ) ); ?>
-
+	<header>
+		<?php wp_nav_menu( array( 'theme_location' => 'MainMenu', 'container_class' => 'menu' ) ); ?>
+	</header>
 	<div class="l-container--fluid u-flex-center">
 		<hgroup class="hero-group">
 			<span class="hero-logo__wrapper">

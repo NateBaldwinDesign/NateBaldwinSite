@@ -228,7 +228,7 @@ body {
     font-weight: 300;
     color: $text-color;
   }
-  
+
   h1, .h1,
   h2, .h2,
   h3, .h3,
@@ -236,7 +236,7 @@ body {
   h5, .h5,
   h6, .h6 {
     font-smoothing: antialiased;
-    text-rendering: optimizeLegibility; 
+    text-rendering: optimizeLegibility;
   }
 
   h1, .h1,
@@ -414,9 +414,9 @@ body {
     padding-bottom: 0;
     padding-left: emRhythm(4);
     border-left: $base-vertical-unit solid $color-primary;
-    font-family: $font-serif;
-    @include setType(5, $ms-up2);
-    font-size: 3.5em;
+    font-family: $font-sans;
+    @include setType(3, $ms-up1); // 5, $ms-up2
+    font-size: 3.5em; // 3.5em
 
     p {
       margin-bottom: emRhythm(1);

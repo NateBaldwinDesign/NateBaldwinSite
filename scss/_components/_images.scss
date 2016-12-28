@@ -53,7 +53,7 @@
 .alignright {
 	@extend %mobile-alignment;
 
-	@include query-small {	
+	@include query-small {
 		@include float(right);
 	    @include margin-left($baseline);
 
@@ -100,6 +100,7 @@
 
 .aligncenter {
 	@extend %mobile-alignment;
+	width: 100%;
 
 	@include query-small {
 		padding-left: multiply($baseline, .75);
